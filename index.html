@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MD HAMEDUL - Portfolio</title>
-  <style>
-    body {font-family: Arial; text-align: center; background: #f0f0f0; padding: 20px;}
-    .box {background: white; padding: 20px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
-    img {width: 100%; border-radius: 10px; margin-bottom: 15px;}
-    .btn {display: block; background: #1877F2; color: white; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px 0;}
-    .copy-btn {background: #28a745; border: none; color: white; padding: 12px; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD HAMEDUL - পাত্র-পাত্রী প্ল্যাটফর্ম</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 20px; background: linear-gradient(to bottom, #ff9966, #ff5e62); margin: 0; }
+        .container { background: white; padding: 30px; border-radius: 20px; max-width: 400px; margin: 20px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        h1 { color: #ff5e62; }
+        img { width: 150px; height: 150px; border-radius: 50%; border: 5px solid #ff5e62; object-fit: cover; }
+        .btn { display: block; padding: 15px; margin: 12px 0; border-radius: 10px; text-decoration: none; color: white; font-weight: bold; font-size: 16px; }
+        .fb { background: #1877f2; }
+        .wa { background: #25D366; }
+        .copy { background: #28a745; }
+    </style>
 </head>
 <body>
-  <div class="box">
-    <h1>আসালামু আলাইকুম, আমি MD HAMEDUL</h1>
-    <p>ওয়েবসাইট ডেভেলপার | বায়োডাটা সার্ভিস</p>
-    <img src="IMG_20260905_000425_552.jpg" alt="আমার ছবি">
-    <a href="https://www.facebook.com" class="btn">Facebook পেজে যান</a>
-    <button class="copy-btn" onclick="copyLink()">লিংক কপি করুন</button>
-  </div>
-  <script>
-    function copyLink() {
-      navigator.clipboard.writeText("https://hamedul691982.github.io");
-      alert("লিংক কপি হয়ে গেছে!");
-    }
-  </script>
+    <div class="container">
+        <h2>আসালামু আলাইকুম, আমি</h2>
+        <h1>MD HAMEDUL</h1>
+        <p>ওয়েবসাইট ডেভেলপার | পাত্র-পাত্রী প্ল্যাটফর্ম সার্ভিস</p>
+        
+        <img src="IMG_20260905_0..." alt="আমার ছবি">
+        
+        <a href="https://www.facebook.com/PatroPatriPlatformOFFICIAL" target="_blank" class="btn fb">Facebook পেজ</a>
+        <a href="https://wa.me/8801829890591" target="_blank" class="btn wa">WhatsApp: 01829890591</a>
+        <a href="#" onclick="copyLink()" class="btn copy">লিংক কপি করুন</a>
+    </div>
+    <script>
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert("লিংক কপি হয়েছে!");
+        }
+    </script>
 </body>
 </html>
