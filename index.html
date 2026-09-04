@@ -2,19 +2,29 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MD HAMEDUL - Portfolio</title>
   <style>
-    body {text-align:center; padding:50px; font-family:Arial; background:#e6f3ff;}
-    h1 {color:#0066cc; font-size:32px;}
-    p {font-size:18px;}
-    .btn {background:#0066cc; color:white; padding:12px 25px; text-decoration:none; border-radius:8px; display:inline-block; margin-top:20px;}
+    body {font-family: Arial; text-align: center; background: #f0f0f0; padding: 20px;}
+    .box {background: white; padding: 20px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+    img {width: 100%; border-radius: 10px; margin-bottom: 15px;}
+    .btn {display: block; background: #1877F2; color: white; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px 0;}
+    .copy-btn {background: #28a745; border: none; color: white; padding: 12px; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer;}
   </style>
 </head>
 <body>
-  <h1>আসালামু আলাইকুম, আমি MD HAMEDUL</h1>
-  <p>ওয়েবসাইট ডেভেলপার | বায়োডাটা সার্ভিস</p>
-  <p>📞 01829890591</p>
-  <p>📧 hamedul691982@gmail.com</p>
-  <a href="#" class="btn">আমার সার্ভিস দেখুন</a>
+  <div class="box">
+    <h1>আসালামু আলাইকুম, আমি MD HAMEDUL</h1>
+    <p>ওয়েবসাইট ডেভেলপার | বায়োডাটা সার্ভিস</p>
+    <img src="IMG_20260905_000425_552.jpg" alt="আমার ছবি">
+    <a href="https://www.facebook.com" class="btn">Facebook পেজে যান</a>
+    <button class="copy-btn" onclick="copyLink()">লিংক কপি করুন</button>
+  </div>
+  <script>
+    function copyLink() {
+      navigator.clipboard.writeText("https://hamedul691982.github.io");
+      alert("লিংক কপি হয়ে গেছে!");
+    }
+  </script>
 </body>
 </html>
