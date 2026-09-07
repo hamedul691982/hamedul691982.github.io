@@ -11,10 +11,6 @@
 
 <style>
 
-/* =========================================
-   BASIC
-========================================= */
-
 *{
     margin:0;
     padding:0;
@@ -26,28 +22,10 @@ html{
 }
 
 body{
-    font-family:
-    "Noto Sans Bengali",
-    "SolaimanLipi",
-    Arial,
-    sans-serif;
-
+    font-family: Arial, sans-serif;
     color:#1d2a35;
-
-    background:
-    radial-gradient(
-        circle at 10% 0%,
-        rgba(215,173,69,.15),
-        transparent 30%
-    ),
-    linear-gradient(
-        180deg,
-        #eef4f7 0%,
-        #ffffff 55%,
-        #eef3f5 100%
-    );
-
-    line-height:1.7;
+    background: linear-gradient(180deg, #eef4f7 0%, #ffffff 55%, #eef3f5 100%);
+    line-height:1.6;
 }
 
 a{
@@ -55,173 +33,93 @@ a{
     color:inherit;
 }
 
-button{
-    font-family:inherit;
-}
-
-img{
-    max-width:100%;
-}
-
-
-/* =========================================
-   COLORS
-========================================= */
-
 :root{
     --navy:#0b2239;
     --navy-light:#123b5d;
     --gold:#d7ad45;
     --gold-light:#f1d487;
-    --cream:#fbf8f0;
-    --white:#ffffff;
-    --text:#1d2a35;
-    --muted:#65727e;
     --border:#e6e0d2;
-    --green:#168a55;
-    --messenger:#4567d8;
-    --shadow: 0 18px 55px rgba(5,25,43,.13);
 }
-
-
-/* =========================================
-   CONTAINER
-========================================= */
 
 .container{
     width:min(1120px,92%);
     margin:auto;
 }
 
-
-/* =========================================
-   TOP BAR
-========================================= */
-
+/* TOP BAR */
 .topbar{
     background:var(--navy);
     color:white;
     font-size:13px;
-    border-bottom: 1px solid rgba(255,255,255,.12);
-}
-
-.topbar-inner{
-    min-height:40px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .topbar strong{
     color:var(--gold-light);
 }
 
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
+/* NAVIGATION */
 nav{
     position:sticky;
     top:0;
     z-index:1000;
     background: rgba(255,255,255,.96);
-    backdrop-filter:blur(14px);
     border-bottom: 1px solid var(--border);
+    padding: 15px 0;
 }
 
 .nav-inner{
-    min-height:72px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
 }
 
 .brand{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
 }
 
 .brand-mark{
-    width:47px;
-    height:47px;
-    border-radius:14px;
+    width:40px;
+    height:40px;
+    border-radius:10px;
     display:grid;
     place-items:center;
-    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    background: var(--navy);
     color:var(--gold-light);
-    font-size:23px;
-    box-shadow: 0 8px 22px rgba(11,34,57,.18);
+    font-size:20px;
 }
 
 .brand-text strong{
     display:block;
     color:var(--navy);
-    font-size:18px;
-    line-height:1.2;
+    font-size:16px;
 }
 
-.brand-text span{
-    display:block;
-    color:var(--muted);
-    font-size:11px;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.nav-links a{
-    color:#344653;
-    font-weight:600;
-    font-size:14px;
-}
-
-.nav-links a:hover{
-    color:var(--navy);
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
+/* HERO */
 .hero{
-    padding: 65px 0 45px;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns: 1.05fr .95fr;
-    gap:42px;
-    align-items:center;
+    padding: 35px 0;
+    text-align: center;
 }
 
 .kicker{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding: 7px 13px;
-    border-radius:999px;
+    display:inline-block;
+    padding: 6px 14px;
+    border-radius:20px;
     background:white;
     border: 1px solid var(--border);
     color:var(--navy);
-    font-weight:700;
-    font-size:13px;
-    box-shadow: 0 8px 25px rgba(10,35,55,.06);
+    font-weight:bold;
+    font-size:12px;
+    margin-bottom: 15px;
 }
 
 .hero h1{
-    margin: 18px 0 13px;
     color:var(--navy);
-    font-size: clamp(35px,5vw,62px);
-    line-height:1.12;
-    letter-spacing:-1px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .hero h1 span{
@@ -229,316 +127,233 @@ nav{
 }
 
 .hero p{
-    font-size:18px;
+    font-size:15px;
     color:#52616c;
-    max-width:680px;
+    max-width:600px;
+    margin: 0 auto 20px;
 }
-
-.hero-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:25px;
-}
-
-
-/* =========================================
-   BUTTON
-========================================= */
 
 .btn{
-    min-height:50px;
-    padding: 12px 18px;
-    border-radius:12px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    font-weight:700;
-    font-size:15px;
-    border: 1px solid transparent;
-    transition:.2s ease;
-    cursor:pointer;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
+    padding: 12px 24px;
+    border-radius:10px;
+    display:inline-block;
+    font-weight:bold;
+    font-size:14px;
+    margin: 5px;
 }
 
 .btn-primary{
     background:var(--navy);
     color:white;
-    box-shadow: 0 10px 25px rgba(11,34,57,.18);
 }
 
 .btn-gold{
-    background: linear-gradient(135deg, #c79b31, #e4c566);
-    color:#15283a;
+    background: var(--gold);
+    color:#0b2239;
 }
 
-
-/* =========================================
-   ADMIN CARD
-========================================= */
-
+/* ADMIN CARD */
 .admin-card{
     background:white;
     border: 1px solid var(--border);
-    border-radius:28px;
-    padding:25px;
-    box-shadow:var(--shadow);
+    border-radius:20px;
+    padding:20px;
     text-align:center;
-    position:relative;
-    overflow:hidden;
-}
-
-.admin-card::before{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    height:6px;
-    background: linear-gradient(90deg, var(--navy), var(--gold), var(--navy));
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .admin-photo{
-    width:210px;
-    height:210px;
+    width:120px;
+    height:120px;
     object-fit:cover;
     border-radius:50%;
-    border: 7px solid white;
-    outline: 2px solid var(--gold);
-    box-shadow: 0 15px 35px rgba(11,34,57,.18);
-    margin: 12px auto 17px;
+    border: 4px solid var(--gold);
+    margin: 0 auto 10px;
     display:block;
 }
 
 .admin-card h2{
     color:var(--navy);
-    font-size:27px;
+    font-size:22px;
 }
 
 .admin-role{
-    color:var(--muted);
-    font-size:14px;
+    color:#65727e;
+    font-size:13px;
+    margin-bottom: 10px;
 }
 
 .verified{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    margin-top:12px;
-    padding: 7px 12px;
-    border-radius:999px;
+    display:inline-block;
+    padding: 5px 12px;
+    border-radius:15px;
     background:#f5f8f9;
-    border: 1px solid #dfe7eb;
     color:var(--navy);
-    font-weight:700;
-    font-size:12px;
+    font-size:11px;
+    font-weight:bold;
 }
 
-
-/* =========================================
-   BIODATA CARD SECTION
-========================================= */
-
+/* BIODATA CARD */
 .biodata-section {
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 .biodata-card {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid #e6e0d2;
-    box-shadow: 0 10px 25px rgba(5,25,43,0.1);
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .biodata-header {
-    background-color: #0b2239;
-    padding: 30px 20px;
+    background-color: var(--navy);
+    padding: 25px 15px;
     text-align: center;
-    border-bottom: 4px solid #d7ad45;
+    border-bottom: 4px solid var(--gold);
 }
 
 .biodata-header h2 {
-    color: #f1d487;
-    margin: 0 0 6px 0;
-    font-size: 24px;
-    font-weight: bold;
+    color: var(--gold-light);
+    margin-bottom: 5px;
+    font-size: 22px;
 }
 
 .biodata-header p {
     color: #ffffff;
-    margin: 0 0 14px 0;
     font-size: 13px;
-    opacity: 0.90;
+    margin-bottom: 10px;
 }
 
 .id-badge {
     display: inline-block;
-    background-color: #d7ad45;
-    color: #0b2239;
+    background-color: var(--gold);
+    color: var(--navy);
     font-weight: bold;
     font-size: 13px;
-    padding: 6px 16px;
-    border-radius: 50px;
+    padding: 4px 14px;
+    border-radius: 20px;
 }
 
 .biodata-body {
-    padding: 25px 22px;
+    padding: 20px;
 }
 
 .biodata-title {
-    color: #0b2239;
+    color: var(--navy);
     font-size: 15px;
-    margin: 12px 0;
-    padding-bottom: 4px;
-    border-bottom: 2px solid #d7ad45;
+    margin: 15px 0 10px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--gold);
     display: inline-block;
 }
 
-.info-table {
-    width: 100%;
-    margin-bottom: 18px;
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
     font-size: 13px;
-    color: #1d2a35;
-    border-collapse: separate;
-    border-spacing: 6px;
 }
 
-.info-table td {
-    background-color: #f5f8f9;
-    border-left: 3px solid #123b5d;
-    border-radius: 4px;
+.info-item {
+    background: #f5f8f9;
     padding: 8px 10px;
+    border-left: 3px solid var(--navy-light);
+    border-radius: 4px;
+}
+
+.full-width {
+    grid-column: span 2;
 }
 
 .expectation-box {
     background-color: #fbf8f0;
-    border: 1px solid #e6e0d2;
-    border-left: 4px solid #d7ad45;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
     border-radius: 6px;
     padding: 12px;
     font-size: 13px;
-    color: #344653;
     line-height: 1.6;
 }
 
 .expectation-box ul {
-    margin: 0;
     padding-left: 18px;
 }
 
 .biodata-footer {
-    background-color: #0b2239;
+    background-color: var(--navy);
     color: #ffffff;
-    padding: 22px 20px;
+    padding: 20px;
     text-align: center;
 }
 
 .biodata-footer a {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
-    color: #f1d487;
-    letter-spacing: 0.5px;
+    color: var(--gold-light);
 }
 
-
-/* =========================================
-   FOOTER
-========================================= */
-
+/* FOOTER */
 footer{
     background:#071a2b;
     color:#cbd7df;
-    padding: 35px 0 25px;
+    padding: 20px 0;
     text-align:center;
-}
-
-.copyright{
     font-size:12px;
-    color:#94a7b5;
-}
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media(max-width:850px){
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero{ text-align:center; }
-    .hero-actions{ justify-content:center; }
-    .nav-links{ display:none; }
+    margin-top: 30px;
 }
 
 </style>
-
 </head>
 
 
 <body>
 
-
 <!-- TOP BAR -->
 <div class="topbar">
-    <div class="container topbar-inner">
-        <span>বিশ্বাসযোগ্য পরিচয় • দায়িত্বশীল যোগাযোগ • গোপনীয়তার প্রতি সম্মান</span>
-        <strong>পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব</strong>
+    <div class="container">
+        বিশ্বস্ততা • গোপনীয়তা • দায়বদ্ধতা | <strong>পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব</strong>
     </div>
 </div>
-
 
 <!-- NAVIGATION -->
 <nav>
     <div class="container nav-inner">
-        <a class="brand" href="#home">
+        <a class="brand" href="#">
             <div class="brand-mark">💎</div>
             <div class="brand-text">
                 <strong>পাত্র-পাত্রী প্ল্যাটফর্ম</strong>
-                <span>সমগ্র বিশ্ব</span>
             </div>
         </a>
-
-        <div class="nav-links">
-            <a href="#home">হোম</a>
-            <a href="#biodata">বায়োডাটা</a>
-            <a href="#contact">যোগাযোগ</a>
-        </div>
     </div>
 </nav>
 
-
 <!-- MAIN HERO -->
-<main id="home">
-<section class="hero">
-    <div class="container hero-grid">
-        <div>
-            <span class="kicker">🌍 সমগ্র বিশ্বের জন্য একটি অনলাইন প্ল্যাটফর্ম</span>
-            <h1>পাত্র-পাত্রী প্ল্যাটফর্ম <br><span>সমগ্র বিশ্ব</span></h1>
-            <p>বিয়ে উপযোগী পাত্র-পাত্রীর পরিচয় ও যোগাযোগের জন্য একটি পরিপাটি, দায়িত্বশীল এবং গোপনীয়তাকে গুরুত্ব দেওয়া অনলাইন প্ল্যাটফর্ম।</p>
-            
-            <div class="hero-actions">
-                <a class="btn btn-primary" href="#contact">📞 যোগাযোগ করুন</a>
-                <a class="btn btn-gold" href="#biodata">📜 বায়োডাটা দেখুন</a>
-            </div>
-        </div>
+<main>
+<section class="hero container">
+    <span class="kicker">🌍 সমগ্র বিশ্বের জন্য একটি অনলাইন প্ল্যাটফর্ম</span>
+    <h1>পাত্র-পাত্রী প্ল্যাটফর্ম <br><span>সমগ্র বিশ্ব</span></h1>
+    <p>বিয়ে উপযোগী পাত্র-পাত্রীর পরিচয় ও যোগাযোগের জন্য একটি পরিপাটি, দায়িত্বশীল এবং গোপনীয়তাকে গুরুত্ব দেওয়া অনলাইন প্ল্যাটফর্ম।</p>
+    
+    <div>
+        <a class="btn btn-primary" href="#contact">📞 যোগাযোগ করুন</a>
+        <a class="btn btn-gold" href="#biodata">📜 বায়োডাটা দেখুন</a>
+    </div>
 
-        <div class="admin-card">
-            <img class="admin-photo" src="admin-photo.jpg" alt="প্ল্যাটফর্ম অ্যাডমিন" loading="eager">
-            <h2>MD HAMEDUL</h2>
-            <div class="admin-role">অ্যাডমিন • পাত্র-পাত্রী প্ল্যাটফর্ম</div>
-            <div class="verified">✓ দায়িত্বশীল পরিচালনা ও গোপনীয়তার প্রতি অঙ্গীকার</div>
-        </div>
+    <!-- ADMIN CARD -->
+    <div class="admin-card">
+        <img class="admin-photo" src="admin-photo.jpg" alt="প্ল্যাটফর্ম অ্যাডমিন">
+        <h2>MD HAMEDUL</h2>
+        <div class="admin-role">অ্যাডমিন • পাত্র-পাত্রী প্ল্যাটফর্ম</div>
+        <div class="verified">✓ দায়িত্বশীল পরিচালনা ও গোপনীয়তার প্রতি অঙ্গীকার</div>
     </div>
 </section>
 
-
-<!-- BIODATA CARD DISPLAY -->
+<!-- BIODATA CARD -->
 <section id="biodata" class="biodata-section container">
     <div class="biodata-card">
         
@@ -551,34 +366,22 @@ footer{
         <div class="biodata-body">
             
             <h3 class="biodata-title">📌 ব্যক্তিগত তথ্য</h3>
-            <table class="info-table">
-                <tr>
-                    <td width="50%"><strong>বয়স:</strong> ৩০ বছর</td>
-                    <td width="50%"><strong>উচ্চতা:</strong> ৫ ফুট</td>
-                </tr>
-                <tr>
-                    <td><strong>শিক্ষা:</strong> HSC পাস</td>
-                    <td><strong>অবস্থা:</strong> তালাকপ্রাপ্তা</td>
-                </tr>
-                <tr>
-                    <td colspan="2"><strong>সন্তান:</strong> কোনো সন্তান নেই</td>
-                </tr>
-            </table>
+            <div class="info-grid">
+                <div class="info-item"><strong>বয়স:</strong> ৩০ বছর</div>
+                <div class="info-item"><strong>উচ্চতা:</strong> ৫ ফুট</div>
+                <div class="info-item"><strong>শিক্ষা:</strong> HSC পাস</div>
+                <div class="info-item"><strong>অবস্থা:</strong> তালাকপ্রাপ্তা</div>
+                <div class="info-item full-width"><strong>সন্তান:</strong> কোনো সন্তান নেই</div>
+            </div>
 
             <h3 class="biodata-title">🏡 পারিবারিক তথ্য</h3>
-            <table class="info-table">
-                <tr>
-                    <td width="50%"><strong>নিজ জেলা:</strong> সিরাজগঞ্জ</td>
-                    <td width="50%"><strong>আর্থিক অবস্থা:</strong> মধ্যবিত্ত</td>
-                </tr>
-                <tr>
-                    <td><strong>পিতার পেশা:</strong> ব্যবসায়ী</td>
-                    <td><strong>মাতার পেশা:</strong> গৃহিণী</td>
-                </tr>
-                <tr>
-                    <td colspan="2"><strong>ভাই-বোন:</strong> ৩ বোন, ১ ভাই (পাত্রী সবার বড়)</td>
-                </tr>
-            </table>
+            <div class="info-grid">
+                <div class="info-item"><strong>নিজ জেলা:</strong> সিরাজগঞ্জ</div>
+                <div class="info-item"><strong>আর্থিক অবস্থা:</strong> মধ্যবিত্ত</div>
+                <div class="info-item"><strong>পিতার পেশা:</strong> ব্যবসায়ী</div>
+                <div class="info-item"><strong>মাতার পেশা:</strong> গৃহিণী</div>
+                <div class="info-item full-width"><strong>ভাই-বোন:</strong> ৩ বোন, ১ ভাই (পাত্রী বড়)</div>
+            </div>
 
             <h3 class="biodata-title">🎯 জীবনসঙ্গীর কাছে প্রত্যাশা</h3>
             <div class="expectation-box">
@@ -593,20 +396,19 @@ footer{
         </div>
 
         <div id="contact" class="biodata-footer">
-            <p style="margin-bottom:6px; font-size:13px; color:#cbd7df;">সরাসরি যোগাযোগ করুন (WhatsApp / IMO)</p>
+            <p style="margin-bottom:5px; font-size:12px; color:#cbd7df;">সরাসরি যোগাযোগ করুন (WhatsApp / IMO)</p>
             <a href="tel:01829890591">📞 01829890591</a>
-            <p style="margin-top:12px; font-size:11px; color:#94a7b5;">বিশ্বস্ততা ও গোপনীয়তার সাথে পরিচালিত অনলাইন বায়োডাটা সেবা</p>
+            <p style="margin-top:10px; font-size:10px; color:#94a7b5;">বিশ্বস্ততা ও গোপনীয়তার সাথে পরিচালিত অনলাইন বায়োডাটা সেবা</p>
         </div>
 
     </div>
 </section>
 </main>
 
-
 <!-- FOOTER -->
 <footer>
     <div class="container">
-        <p class="copyright">© পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব | সর্বস্বত্ব সংরক্ষিত</p>
+        <p>© পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব | সর্বস্বত্ব সংরক্ষিত</p>
     </div>
 </footer>
 
