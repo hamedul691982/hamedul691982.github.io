@@ -1,416 +1,398 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পাত্র-পাত্রী প্ল্যাটফর্ম - সমগ্র বিশ্ব</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b132b;
+            --card-bg: #1c2541;
+            --accent-gold: #ffd700;
+            --text-light: #ffffff;
+            --text-sub: #d1d5db;
+            
+            /* Action Button Colors */
+            --whatsapp-green: #25D366;
+            --imo-cyan: #00a8e8;
+            --messenger-blue: #0084FF;
+            --sms-violet: #8A2BE2;
+            --call-orange: #FF6B00;
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব। গোপনীয়তা, দায়িত্বশীল যোগাযোগ ও সুন্দর পরিচয়ের জন্য একটি অনলাইন প্ল্যাটফর্ম।">
-<meta name="theme-color" content="#0b2239">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
 
-<title>পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব</title>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+        }
 
-<style>
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        /* Banner & Header Section */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
 
-html{
-    scroll-behavior:smooth;
-}
+        .header h1 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
 
-body{
-    font-family: Arial, sans-serif;
-    color:#1d2a35;
-    background: linear-gradient(180deg, #eef4f7 0%, #ffffff 55%, #eef3f5 100%);
-    line-height:1.6;
-}
+        .header p {
+            color: var(--text-sub);
+            font-size: 1.1rem;
+        }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+        .admin-badge {
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--accent-gold);
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 600;
+            border: 1px solid var(--accent-gold);
+        }
 
-:root{
-    --navy:#0b2239;
-    --navy-light:#123b5d;
-    --gold:#d7ad45;
-    --gold-light:#f1d487;
-    --border:#e6e0d2;
-}
+        .section-title {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.container{
-    width:min(1120px,92%);
-    margin:auto;
-}
+        /* ID Storage Card */
+        .id-box {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-/* TOP BAR */
-.topbar{
-    background:var(--navy);
-    color:white;
-    font-size:13px;
-    padding: 10px 0;
-    text-align: center;
-}
+        .id-box input {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #4b5563;
+            background: #0f172a;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+        }
 
-.topbar strong{
-    color:var(--gold-light);
-}
+        .id-box input:focus {
+            border-color: var(--accent-gold);
+        }
 
-/* NAVIGATION */
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background: rgba(255,255,255,.96);
-    border-bottom: 1px solid var(--border);
-    padding: 15px 0;
-}
+        /* Communication Buttons Grid */
+        .comm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            margin-bottom: 25px;
+        }
 
-.nav-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
+        .btn-comm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 10px;
+            border-radius: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, opacity 0.2s;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
+        .btn-comm:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
 
-.brand-mark{
-    width:40px;
-    height:40px;
-    border-radius:10px;
-    display:grid;
-    place-items:center;
-    background: var(--navy);
-    color:var(--gold-light);
-    font-size:20px;
-}
+        .btn-comm i {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+        }
 
-.brand-text strong{
-    display:block;
-    color:var(--navy);
-    font-size:16px;
-}
+        .btn-whatsapp { background-color: var(--whatsapp-green); }
+        .btn-imo { background-color: var(--imo-cyan); }
+        .btn-messenger { background-color: var(--messenger-blue); }
+        .btn-sms { background-color: var(--sms-violet); }
+        .btn-call { background-color: var(--call-orange); }
 
-/* HERO */
-.hero{
-    padding: 35px 0;
-    text-align: center;
-}
+        /* Album Links List */
+        .album-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
 
-.kicker{
-    display:inline-block;
-    padding: 6px 14px;
-    border-radius:20px;
-    background:white;
-    border: 1px solid var(--border);
-    color:var(--navy);
-    font-weight:bold;
-    font-size:12px;
-    margin-bottom: 15px;
-}
+        .btn-fb-view {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s, border-color 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-.hero h1{
-    color:var(--navy);
-    font-size: 32px;
-    margin-bottom: 10px;
-}
+        .btn-fb-view:hover {
+            background: rgba(255, 215, 0, 0.15);
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
 
-.hero h1 span{
-    color:#a47a18;
-}
+        .btn-fb-view i {
+            font-size: 1.3rem;
+            color: #1877F2;
+        }
 
-.hero p{
-    font-size:15px;
-    color:#52616c;
-    max-width:600px;
-    margin: 0 auto 20px;
-}
+        /* Social Channels Grid */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
 
-.btn{
-    padding: 12px 24px;
-    border-radius:10px;
-    display:inline-block;
-    font-weight:bold;
-    font-size:14px;
-    margin: 5px;
-}
+        .btn-social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #0f172a;
+            color: #fff;
+            padding: 12px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 1px solid #334155;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
 
-.btn-primary{
-    background:var(--navy);
-    color:white;
-}
+        .btn-social:hover {
+            background: #1e293b;
+        }
 
-.btn-gold{
-    background: var(--gold);
-    color:#0b2239;
-}
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
 
-/* ADMIN CARD */
-.admin-card{
-    background:white;
-    border: 1px solid var(--border);
-    border-radius:20px;
-    padding:20px;
-    text-align:center;
-    max-width: 400px;
-    margin: 20px auto;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-.admin-photo{
-    width:120px;
-    height:120px;
-    object-fit:cover;
-    border-radius:50%;
-    border: 4px solid var(--gold);
-    margin: 0 auto 10px;
-    display:block;
-}
-
-.admin-card h2{
-    color:var(--navy);
-    font-size:22px;
-}
-
-.admin-role{
-    color:#65727e;
-    font-size:13px;
-    margin-bottom: 10px;
-}
-
-.verified{
-    display:inline-block;
-    padding: 5px 12px;
-    border-radius:15px;
-    background:#f5f8f9;
-    color:var(--navy);
-    font-size:11px;
-    font-weight:bold;
-}
-
-/* BIODATA CARD */
-.biodata-section {
-    padding: 30px 0;
-}
-
-.biodata-card {
-    max-width: 550px;
-    margin: 0 auto;
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 2px solid var(--gold);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.biodata-header {
-    background-color: var(--navy);
-    padding: 25px 15px;
-    text-align: center;
-    border-bottom: 4px solid var(--gold);
-}
-
-.biodata-header h2 {
-    color: var(--gold-light);
-    margin-bottom: 5px;
-    font-size: 22px;
-}
-
-.biodata-header p {
-    color: #ffffff;
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-.id-badge {
-    display: inline-block;
-    background-color: var(--gold);
-    color: var(--navy);
-    font-weight: bold;
-    font-size: 13px;
-    padding: 4px 14px;
-    border-radius: 20px;
-}
-
-.biodata-body {
-    padding: 20px;
-}
-
-.biodata-title {
-    color: var(--navy);
-    font-size: 15px;
-    margin: 15px 0 10px;
-    padding-bottom: 3px;
-    border-bottom: 2px solid var(--gold);
-    display: inline-block;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    font-size: 13px;
-}
-
-.info-item {
-    background: #f5f8f9;
-    padding: 8px 10px;
-    border-left: 3px solid var(--navy-light);
-    border-radius: 4px;
-}
-
-.full-width {
-    grid-column: span 2;
-}
-
-.expectation-box {
-    background-color: #fbf8f0;
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--gold);
-    border-radius: 6px;
-    padding: 12px;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.expectation-box ul {
-    padding-left: 18px;
-}
-
-.biodata-footer {
-    background-color: var(--navy);
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-.biodata-footer a {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--gold-light);
-}
-
-/* FOOTER */
-footer{
-    background:#071a2b;
-    color:#cbd7df;
-    padding: 20px 0;
-    text-align:center;
-    font-size:12px;
-    margin-top: 30px;
-}
-
-</style>
+        @media (max-width: 480px) {
+            .comm-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
 </head>
-
-
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-    <div class="container">
-        বিশ্বস্ততা • গোপনীয়তা • দায়বদ্ধতা | <strong>পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব</strong>
+<div class="container">
+    <!-- Header Section -->
+    <div class="header">
+        <h1>পাত্র-পাত্রী প্ল্যাটফর্ম</h1>
+        <p>সঠিক মানুষ, সুন্দর জীবন • সমগ্র বিশ্ব</p>
+        <div class="admin-badge">
+            <i class="fa-solid fa-user-shield"></i> অ্যাডমিন: MD HAMEDUL
+        </div>
+    </div>
+
+    <!-- Communication ID Setup -->
+    <div class="id-box">
+        <label for="biodataId"><b>আপনার বায়োডাটা/প্রার্থী আইডি লিখুন:</b></label>
+        <input type="text" id="biodataId" placeholder="উদাহরণ: BD-102" oninput="saveId()">
+    </div>
+
+    <!-- Unified Helpline Action Buttons -->
+    <div class="section-title">
+        <i class="fa-solid fa-headset"></i> সরাসরি যোগাযোগ করুন (হেল্পলাইন: 01829890591)
+    </div>
+    
+    <div class="comm-grid">
+        <button class="btn-comm btn-whatsapp" onclick="actionWhatsApp()">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </button>
+        <button class="btn-comm btn-imo" onclick="actionIMO()">
+            <i class="fa-solid fa-comments"></i> IMO
+        </button>
+        <button class="btn-comm btn-messenger" onclick="actionMessenger()">
+            <i class="fa-brands fa-facebook-messenger"></i> Messenger
+        </button>
+        <button class="btn-comm btn-sms" onclick="actionSMS()">
+            <i class="fa-solid fa-comment-sms"></i> SMS
+        </button>
+        <a href="tel:01829890591" class="btn-comm btn-call">
+            <i class="fa-solid fa-phone"></i> Direct Call
+        </a>
+    </div>
+
+    <!-- District / Category Album Section -->
+    <div class="section-title">
+        <i class="fa-solid fa-images"></i> জেলাভিত্তিক বায়োডাটা অ্যালবামসমূহ
+    </div>
+
+    <div class="album-list">
+        <a href="https://www.facebook.com/share/p/1DakgfxWFj/" target="_blank" class="btn-fb-view">
+            <span>১ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/19N8SWZYAG/" target="_blank" class="btn-fb-view">
+            <span>২ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/189K2mTeFb/" target="_blank" class="btn-fb-view">
+            <span>৩ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/1M8KRoYvtQ/" target="_blank" class="btn-fb-view">
+            <span>৪ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/1Em29EF52j/" target="_blank" class="btn-fb-view">
+            <span>৫ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/1KDjrYVWyT/" target="_blank" class="btn-fb-view">
+            <span>৬ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/1LtYkVxhGt/" target="_blank" class="btn-fb-view">
+            <span>৭ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/1ERrKTDF3Z/" target="_blank" class="btn-fb-view">
+            <span>৮ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/14mWScbRVPV/" target="_blank" class="btn-fb-view">
+            <span>৯ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/14oRSNo5Mjx/" target="_blank" class="btn-fb-view">
+            <span>১০ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/197fdZVWnF/" target="_blank" class="btn-fb-view">
+            <span>১১ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/1F6RnRYrJ8/" target="_blank" class="btn-fb-view">
+            <span>১২ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com/share/p/1HVxHHhMno/" target="_blank" class="btn-fb-view">
+            <span>১৩ নম্বর বায়োডাটা অ্যালবাম</span>
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+    </div>
+
+    <!-- Official Social Media Links -->
+    <div class="section-title">
+        <i class="fa-solid fa-share-nodes"></i> আমাদের সামাজিক যোগাযোগ মাধ্যম
+    </div>
+
+    <div class="social-grid">
+        <a href="https://www.facebook.com/PatroPatriPlatformOFFICIAL" target="_blank" class="btn-social">
+            <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook Page
+        </a>
+        <a href="https://www.facebook.com/patropatri.platform" target="_blank" class="btn-social">
+            <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook Profile
+        </a>
+        <a href="https://www.facebook.com/share/g/1EjnGVzL69/" target="_blank" class="btn-social">
+            <i class="fa-solid fa-users" style="color: #1877F2;"></i> Facebook Group
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>আপনার বিশ্বাসই আমাদের অনুপ্রেরণা ❤️</p>
+        <p>© পাত্র-পাত্রী প্ল্যাটফর্ম - সর্বস্বত্ব সংরক্ষিত</p>
     </div>
 </div>
 
-<!-- NAVIGATION -->
-<nav>
-    <div class="container nav-inner">
-        <a class="brand" href="#">
-            <div class="brand-mark">💎</div>
-            <div class="brand-text">
-                <strong>পাত্র-পাত্রী প্ল্যাটফর্ম</strong>
-            </div>
-        </a>
-    </div>
-</nav>
+<script>
+    const PHONE_NUMBER = "8801829890591";
+    const DISPLAY_PHONE = "01829890591";
 
-<!-- MAIN HERO -->
-<main>
-<section class="hero container">
-    <span class="kicker">🌍 সমগ্র বিশ্বের জন্য একটি অনলাইন প্ল্যাটফর্ম</span>
-    <h1>পাত্র-পাত্রী প্ল্যাটফর্ম <br><span>সমগ্র বিশ্ব</span></h1>
-    <p>বিয়ে উপযোগী পাত্র-পাত্রীর পরিচয় ও যোগাযোগের জন্য একটি পরিপাটি, দায়িত্বশীল এবং গোপনীয়তাকে গুরুত্ব দেওয়া অনলাইন প্ল্যাটফর্ম।</p>
-    
-    <div>
-        <a class="btn btn-primary" href="#contact">📞 যোগাযোগ করুন</a>
-        <a class="btn btn-gold" href="#biodata">📜 বায়োডাটা দেখুন</a>
-    </div>
+    // Auto-ID Auto Save and Restore via localStorage
+    window.onload = function() {
+        const savedId = localStorage.getItem('user_biodata_id');
+        if (savedId) {
+            document.getElementById('biodataId').value = savedId;
+        }
+    };
 
-    <!-- ADMIN CARD -->
-    <div class="admin-card">
-        <img class="admin-photo" src="admin-photo.jpg" alt="প্ল্যাটফর্ম অ্যাডমিন">
-        <h2>MD HAMEDUL</h2>
-        <div class="admin-role">অ্যাডমিন • পাত্র-পাত্রী প্ল্যাটফর্ম</div>
-        <div class="verified">✓ দায়িত্বশীল পরিচালনা ও গোপনীয়তার প্রতি অঙ্গীকার</div>
-    </div>
-</section>
+    function saveId() {
+        const idVal = document.getElementById('biodataId').value;
+        localStorage.setItem('user_biodata_id', idVal);
+    }
 
-<!-- BIODATA CARD -->
-<section id="biodata" class="biodata-section container">
-    <div class="biodata-card">
-        
-        <div class="biodata-header">
-            <h2>💍 পাত্রীর বায়োডাটা</h2>
-            <p>দ্বীনদার ও পারিবারিক মূল্যবোধসম্পন্ন পাত্রের সন্ধান</p>
-            <div class="id-badge">🆔 ID: IMO SIRAJGANJ F05</div>
-        </div>
+    function getIdText() {
+        const idVal = document.getElementById('biodataId').value.trim();
+        return idVal ? ` (আইডি: ${idVal})` : '';
+    }
 
-        <div class="biodata-body">
-            
-            <h3 class="biodata-title">📌 ব্যক্তিগত তথ্য</h3>
-            <div class="info-grid">
-                <div class="info-item"><strong>বয়স:</strong> ৩০ বছর</div>
-                <div class="info-item"><strong>উচ্চতা:</strong> ৫ ফুট</div>
-                <div class="info-item"><strong>শিক্ষা:</strong> HSC পাস</div>
-                <div class="info-item"><strong>অবস্থা:</strong> তালাকপ্রাপ্তা</div>
-                <div class="info-item full-width"><strong>সন্তান:</strong> কোনো সন্তান নেই</div>
-            </div>
+    // Dynamic Action Triggers
+    function actionWhatsApp() {
+        const msg = encodeURIComponent(`আসসালামু আলাইকুম, আমি বায়োডাটা সেবা সংক্রান্ত তথ্য জানতে চাই${getIdText()}।`);
+        window.open(`https://wa.me/${PHONE_NUMBER}?text=${msg}`, '_blank');
+    }
 
-            <h3 class="biodata-title">🏡 পারিবারিক তথ্য</h3>
-            <div class="info-grid">
-                <div class="info-item"><strong>নিজ জেলা:</strong> সিরাজগঞ্জ</div>
-                <div class="info-item"><strong>আর্থিক অবস্থা:</strong> মধ্যবিত্ত</div>
-                <div class="info-item"><strong>পিতার পেশা:</strong> ব্যবসায়ী</div>
-                <div class="info-item"><strong>মাতার পেশা:</strong> গৃহিণী</div>
-                <div class="info-item full-width"><strong>ভাই-বোন:</strong> ৩ বোন, ১ ভাই (পাত্রী বড়)</div>
-            </div>
+    function actionIMO() {
+        alert(`IMO-তে যোগাযোগ করতে আপনার মোবাইল থেকে ${DISPLAY_PHONE} নম্বরটি সেভ করে ইমো অ্যাপে খুঁজুন।`);
+    }
 
-            <h3 class="biodata-title">🎯 জীবনসঙ্গীর কাছে প্রত্যাশা</h3>
-            <div class="expectation-box">
-                <ul>
-                    <li>অবশ্যই <strong>সিরাজগঞ্জ</strong> জেলার মধ্যে হতে হবে।</li>
-                    <li>তালাকপ্রাপ্ত পাত্রদের কোনো সমস্যা নেই।</li>
-                    <li>কোনো সন্তান (ছেলে-মেয়ে) থাকা যাবে না।</li>
-                    <li>দ্বীনদার, সৎ ও মার্জিত চরিত্রের হতে হবে।</li>
-                </ul>
-            </div>
+    function actionMessenger() {
+        window.open(`https://m.me/PatroPatriPlatformOFFICIAL`, '_blank');
+    }
 
-        </div>
-
-        <div id="contact" class="biodata-footer">
-            <p style="margin-bottom:5px; font-size:12px; color:#cbd7df;">সরাসরি যোগাযোগ করুন (WhatsApp / IMO)</p>
-            <a href="tel:01829890591">📞 01829890591</a>
-            <p style="margin-top:10px; font-size:10px; color:#94a7b5;">বিশ্বস্ততা ও গোপনীয়তার সাথে পরিচালিত অনলাইন বায়োডাটা সেবা</p>
-        </div>
-
-    </div>
-</section>
-</main>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <p>© পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব | সর্বস্বত্ব সংরক্ষিত</p>
-    </div>
-</footer>
+    function actionSMS() {
+        const msg = encodeURIComponent(`বায়োডাটা তথ্য জানতে চাই${getIdText()}`);
+        window.open(`sms:${DISPLAY_PHONE}?body=${msg}`, '_self');
+    }
+</script>
 
 </body>
-</html>
+        </html>
+        
