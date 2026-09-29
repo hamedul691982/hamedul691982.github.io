@@ -1,411 +1,96 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>পাত্র-পাত্রী প্ল্যাটফর্ম - সমগ্র বিশ্ব</title>
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0b132b;
-            --card-bg: #1c2541;
-            --accent-gold: #ffd700;
-            --text-light: #ffffff;
-            --text-sub: #d1d5db;
-            
-            /* Action Button Colors */
-            --whatsapp-green: #25D366;
-            --imo-cyan: #00a8e8;
-            --messenger-blue: #0084FF;
-            --sms-violet: #8A2BE2;
-            --call-orange: #FF6B00;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Hind Siliguri', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-light);
-            padding: 20px 10px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background-color: var(--card-bg);
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-        }
-
-        /* Banner Image Styling */
-        .banner-img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-            display: block;
-        }
-
-        /* Header Section */
-        .header {
-            text-align: center;
-            border-bottom: 2px solid var(--accent-gold);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
-        }
-
-        .header h1 {
-            color: var(--accent-gold);
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-
-        .header p {
-            color: var(--text-sub);
-            font-size: 1.1rem;
-        }
-
-        .admin-badge {
-            background: rgba(255, 215, 0, 0.1);
-            color: var(--accent-gold);
-            padding: 6px 16px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-            font-weight: 600;
-            border: 1px solid var(--accent-gold);
-        }
-
-        .section-title {
-            color: var(--accent-gold);
-            font-size: 1.3rem;
-            margin: 25px 0 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* ID Storage Card */
-        .id-box {
-            background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .id-box input {
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #4b5563;
-            background: #0f172a;
-            color: #fff;
-            font-size: 1rem;
-            outline: none;
-        }
-
-        .id-box input:focus {
-            border-color: var(--accent-gold);
-        }
-
-        /* Communication Buttons Grid */
-        .comm-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 12px;
-            margin-bottom: 25px;
-        }
-
-        .btn-comm {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 10px;
-            border-radius: 10px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s, opacity 0.2s;
-            cursor: pointer;
-            border: none;
-            text-align: center;
-        }
-
-        .btn-comm:hover {
-            transform: translateY(-3px);
-            opacity: 0.9;
-        }
-
-        .btn-comm i {
-            font-size: 1.8rem;
-            margin-bottom: 6px;
-        }
-
-        .btn-whatsapp { background-color: var(--whatsapp-green); }
-        .btn-imo { background-color: var(--imo-cyan); }
-        .btn-messenger { background-color: var(--messenger-blue); }
-        .btn-sms { background-color: var(--sms-violet); }
-        .btn-call { background-color: var(--call-orange); }
-
-        /* Album Links List */
-        .album-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .btn-fb-view {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            padding: 14px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            transition: background 0.3s, border-color 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-fb-view:hover {
-            background: rgba(255, 215, 0, 0.15);
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
-        }
-
-        .btn-fb-view i {
-            font-size: 1.3rem;
-            color: #1877F2;
-        }
-
-        /* Social Channels Grid */
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .btn-social {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #0f172a;
-            color: #fff;
-            padding: 12px 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            border: 1px solid #334155;
-            font-size: 0.95rem;
-            transition: background 0.2s;
-        }
-
-        .btn-social:hover {
-            background: #1e293b;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: var(--text-sub);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 480px) {
-            .comm-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>পাত্র-পাত্রী প্ল্যাটফর্ম - সমগ্র বিশ্ব | MD HAMEDUL</title>
+<meta name="description" content="সঠিক মানুষ, সুন্দর জীবন। বাংলাদেশ ও বিশ্বের সকল জেলার পাত্র-পাত্রীর বায়োডাটা অ্যালবাম দেখুন। সরাসরি যোগাযোগ: 01829890591">
+<meta property="og:title" content="পাত্র-পাত্রী প্ল্যাটফর্ম">
+<meta property="og:description" content="সমগ্র বিশ্বের পাত্র-পাত্রী বায়োডাটা - সরাসরি যোগাযোগ করুন">
+<meta property="og:image" content="banner.jpg">
+<meta property="og:url" content="https://hamedul691982.github.io/">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b132b;--card:#1c2541;--gold:#ffd700;--light:#fff;--sub:#d1d5db;--wa:#25D366;--imo:#00a8e8;--ms:#0084FF;--sms:#8A2BE2;--call:#FF6B00}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Hind Siliguri',sans-serif}
+body{background:var(--bg);color:var(--light);padding:15px;display:flex;justify-content:center}
+.container{max-width:850px;width:100%;background:var(--card);border-radius:16px;padding:22px;border:1px solid rgba(255,215,0,.2)}
+.banner-img{width:100%;height:auto;border-radius:12px;margin-bottom:20px;display:block}
+.header{text-align:center;border-bottom:2px solid var(--gold);padding-bottom:18px;margin-bottom:20px}
+.header h1{color:var(--gold);font-size:2rem}
+.admin-badge{background:rgba(255,215,0,.1);color:var(--gold);padding:6px 16px;border-radius:20px;display:inline-block;margin-top:10px;border:1px solid var(--gold);font-weight:600}
+.section-title{color:var(--gold);font-size:1.25rem;margin:22px 0 12px;display:flex;align-items:center;gap:8px}
+.id-box{background:rgba(255,255,255,.05);padding:14px;border-radius:10px;margin-bottom:20px}
+.id-box input{width:100%;padding:12px;border-radius:8px;border:1px solid #4b5563;background:#0f172a;color:#fff;font-size:1rem;outline:none;margin-top:8px}
+.comm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:20px}
+.btn-comm{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 10px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600;border:none;cursor:pointer}
+.btn-comm i{font-size:1.8rem;margin-bottom:6px}
+.btn-wa{background:var(--wa)}.btn-imo{background:var(--imo)}.btn-ms{background:var(--ms)}.btn-sms{background:var(--sms)}.btn-call{background:var(--call)}
+.album-list{display:flex;flex-direction:column;gap:10px}
+.btn-fb{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);padding:14px 18px;border-radius:10px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.1)}
+.btn-fb:hover{background:rgba(255,215,0,.15);border-color:var(--gold)}
+.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.btn-social{display:flex;gap:10px;align-items:center;background:#0f172a;padding:12px 14px;border-radius:8px;color:#fff;text-decoration:none;border:1px solid #334155}
+.footer{text-align:center;margin-top:25px;padding-top:12px;border-top:1px solid rgba(255,255,255,.1);color:var(--sub);font-size:.9rem}
+@media(max-width:480px){.comm-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
 </head>
 <body>
-
 <div class="container">
-    <!-- একদম ওপরে আপনার ব্যানার ছবি (ছবির ফাইল নাম banner.jpg করে গিটহাবে আপলোড করবেন অথবা নিচের নামের জায়গায় আপনার ছবির নাম দেবেন) -->
-    <img src="banner.jpg" alt="পাত্র-পাত্রী প্ল্যাটফর্ম ব্যানার" class="banner-img">
-
-    <!-- Header Section -->
-    <div class="header">
-        <h1>পাত্র-পাত্রী প্ল্যাটফর্ম</h1>
-        <p>সঠিক মানুষ, সুন্দর জীবন • সমগ্র বিশ্ব</p>
-        <div class="admin-badge">
-            <i class="fa-solid fa-user-shield"></i> অ্যাডমিন: MD HAMEDUL
-        </div>
-    </div>
-
-    <!-- Communication ID Setup -->
-    <div class="id-box">
-        <label for="biodataId"><b>আপনার বায়োডাটা/প্রার্থী আইডি লিখুন:</b></label>
-        <input type="text" id="biodataId" placeholder="উদাহরণ: BD-102" oninput="saveId()">
-    </div>
-
-    <!-- Unified Helpline Action Buttons -->
-    <div class="section-title">
-        <i class="fa-solid fa-headset"></i> সরাসরি যোগাযোগ করুন (হেল্পলাইন: 01829890591)
-    </div>
-    
-    <div class="comm-grid">
-        <button class="btn-comm btn-whatsapp" onclick="actionWhatsApp()">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </button>
-        <button class="btn-comm btn-imo" onclick="actionIMO()">
-            <i class="fa-solid fa-comments"></i> IMO
-        </button>
-        <button class="btn-comm btn-messenger" onclick="actionMessenger()">
-            <i class="fa-brands fa-facebook-messenger"></i> Messenger
-        </button>
-        <button class="btn-comm btn-sms" onclick="actionSMS()">
-            <i class="fa-solid fa-comment-sms"></i> SMS
-        </button>
-        <a href="tel:01829890591" class="btn-comm btn-call">
-            <i class="fa-solid fa-phone"></i> Direct Call
-        </a>
-    </div>
-
-    <!-- District / Category Album Section -->
-    <div class="section-title">
-        <i class="fa-solid fa-images"></i> জেলাভিত্তিক বায়োডাটা অ্যালবামসমূহ
-    </div>
-
-    <div class="album-list">
-        <a href="https://www.facebook.com/share/p/1DakgfxWFj/" target="_blank" class="btn-fb-view">
-            <span>১ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/19N8SWZYAG/" target="_blank" class="btn-fb-view">
-            <span>২ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/189K2mTeFb/" target="_blank" class="btn-fb-view">
-            <span>৩ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/1M8KRoYvtQ/" target="_blank" class="btn-fb-view">
-            <span>৪ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/1Em29EF52j/" target="_blank" class="btn-fb-view">
-            <span>৫ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/1KDjrYVWyT/" target="_blank" class="btn-fb-view">
-            <span>৬ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/1LtYkVxhGt/" target="_blank" class="btn-fb-view">
-            <span>৭ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/1ERrKTDF3Z/" target="_blank" class="btn-fb-view">
-            <span>৮ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/14mWScbRVPV/" target="_blank" class="btn-fb-view">
-            <span>৯ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/14oRSNo5Mjx/" target="_blank" class="btn-fb-view">
-            <span>১০ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/197fdZVWnF/" target="_blank" class="btn-fb-view">
-            <span>১১ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/1F6RnRYrJ8/" target="_blank" class="btn-fb-view">
-            <span>১২ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.facebook.com/share/p/1HVxHHhMno/" target="_blank" class="btn-fb-view">
-            <span>১৩ নম্বর বায়োডাটা অ্যালবাম</span>
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-    </div>
-
-    <!-- Official Social Media Links -->
-    <div class="section-title">
-        <i class="fa-solid fa-share-nodes"></i> আমাদের সামাজিক যোগাযোগ মাধ্যম
-    </div>
-
-    <div class="social-grid">
-        <a href="https://www.facebook.com/PatroPatriPlatformOFFICIAL" target="_blank" class="btn-social">
-            <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook Page
-        </a>
-        <a href="https://www.facebook.com/patropatri.platform" target="_blank" class="btn-social">
-            <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook Profile
-        </a>
-        <a href="https://www.facebook.com/share/g/1EjnGVzL69/" target="_blank" class="btn-social">
-            <i class="fa-solid fa-users" style="color: #1877F2;"></i> Facebook Group
-        </a>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <p>আপনার বিশ্বাসই আমাদের অনুপ্রেরণা ❤️</p>
-        <p>© পাত্র-পাত্রী প্ল্যাটফর্ম - সর্বস্বত্ব সংরক্ষিত</p>
-    </div>
+<img src="banner.jpg" alt="Banner" class="banner-img" onerror="this.style.display='none'">
+<div class="header">
+<h1>পাত্র-পাত্রী প্ল্যাটফর্ম</h1>
+<p>সঠিক মানুষ, সুন্দর জীবন • সমগ্র বিশ্ব</p>
+<div class="admin-badge"><i class="fa-solid fa-user-shield"></i> অ্যাডমিন: MD HAMEDUL</div>
 </div>
 
+<div class="id-box">
+<label><b>আপনার বায়োডাটা আইডি লিখুন:</b></label>
+<input type="text" id="biodataId" placeholder="উদাহরণ: BD-102" oninput="localStorage.setItem('user_biodata_id',this.value)">
+</div>
+
+<div class="section-title"><i class="fa-solid fa-headset"></i> সরাসরি যোগাযোগ (01829890591)</div>
+<div class="comm-grid">
+<button class="btn-comm btn-wa" onclick="openWA()"><i class="fa-brands fa-whatsapp"></i>WhatsApp</button>
+<button class="btn-comm btn-imo" onclick="alert('IMO তে 01829890591 সেভ করে খুঁজুন')"><i class="fa-solid fa-comments"></i>IMO</button>
+<button class="btn-comm btn-ms" onclick="window.open('https://m.me/PatroPatriPlatformOFFICIAL','_blank')"><i class="fa-brands fa-facebook-messenger"></i>Messenger</button>
+<button class="btn-comm btn-sms" onclick="openSMS()"><i class="fa-solid fa-comment-sms"></i>SMS</button>
+<a href="tel:01829890591" class="btn-comm btn-call"><i class="fa-solid fa-phone"></i>Direct Call</a>
+</div>
+
+<div class="section-title"><i class="fa-solid fa-images"></i> জেলাভিত্তিক বায়োডাটা অ্যালবাম</div>
+<div class="album-list">
+<a href="https://www.facebook.com/share/p/1DakgfxWFj/" target="_blank" rel="noopener" class="btn-fb"><span>১ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/19N8SWZYAG/" target="_blank" rel="noopener" class="btn-fb"><span>২ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/189K2mTeFb/" target="_blank" rel="noopener" class="btn-fb"><span>৩ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/1M8KRoYvtQ/" target="_blank" rel="noopener" class="btn-fb"><span>৪ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/1Em29EF52j/" target="_blank" rel="noopener" class="btn-fb"><span>৫ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/1KDjrYVWyT/" target="_blank" rel="noopener" class="btn-fb"><span>৬ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/1LtYkVxhGt/" target="_blank" rel="noopener" class="btn-fb"><span>৭ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/1ERrKTDF3Z/" target="_blank" rel="noopener" class="btn-fb"><span>৮ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/14mWScbRVPV/" target="_blank" rel="noopener" class="btn-fb"><span>৯ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/14oRSNo5Mjx/" target="_blank" rel="noopener" class="btn-fb"><span>১০ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/197fdZVWnF/" target="_blank" rel="noopener" class="btn-fb"><span>১১ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/1F6RnRYrJ8/" target="_blank" rel="noopener" class="btn-fb"><span>১২ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://www.facebook.com/share/p/1HVxHHhMno/" target="_blank" rel="noopener" class="btn-fb"><span>১৩ নম্বর বায়োডাটা অ্যালবাম</span><i class="fa-brands fa-facebook" style="color:#1877F2"></i></a>
+</div>
+
+<div class="section-title"><i class="fa-solid fa-share-nodes"></i> আমাদের সামাজিক যোগাযোগ মাধ্যম</div>
+<div class="social-grid">
+<a href="https://www.facebook.com/PatroPatriPlatformOFFICIAL" target="_blank" rel="noopener" class="btn-social"><i class="fa-brands fa-facebook" style="color:#1877F2"></i> Facebook Page</a>
+<a href="https://www.facebook.com/patropatri.platform" target="_blank" rel="noopener" class="btn-social"><i class="fa-brands fa-facebook" style="color:#1877F2"></i> Profile</a>
+<a href="https://www.facebook.com/share/g/1EjnGVzL69/" target="_blank" rel="noopener" class="btn-social"><i class="fa-solid fa-users" style="color:#1877F2"></i> Group</a>
+</div>
+
+<div class="footer"><p>আপনার বিশ্বাসই আমাদের অনুপ্রেরণা ❤️</p><p>© পাত্র-পাত্রী প্ল্যাটফর্ম</p><p>লিংক: https://hamedul691982.github.io</p></div>
+</div>
 <script>
-    const PHONE_NUMBER = "8801829890591";
-    const DISPLAY_PHONE = "01829890591";
-
-    // Auto-ID Auto Save and Restore via localStorage
-    window.onload = function() {
-        const savedId = localStorage.getItem('user_biodata_id');
-        if (savedId) {
-            document.getElementById('biodataId').value = savedId;
-        }
-    };
-
-    function saveId() {
-        const idVal = document.getElementById('biodataId').value;
-        localStorage.setItem('user_biodata_id', idVal);
-    }
-
-    function getIdText() {
-        const idVal = document.getElementById('biodataId').value.trim();
-        return idVal ? ` (আইডি: ${idVal})` : '';
-    }
-
-    // Dynamic Action Triggers
-    function actionWhatsApp() {
-        const msg = encodeURIComponent(`আসসালামু আলাইকুম, আমি বায়োডাটা সেবা সংক্রান্ত তথ্য জানতে চাই${getIdText()}।`);
-        window.open(`https://wa.me/${PHONE_NUMBER}?text=${msg}`, '_blank');
-    }
-
-    function actionIMO() {
-        alert(`IMO-তে যোগাযোগ করতে আপনার মোবাইল থেকে ${DISPLAY_PHONE} নম্বরটি সেভ করে ইমো অ্যাপে খুঁজুন।`);
-    }
-
-    function actionMessenger() {
-        window.open(`https://m.me/PatroPatriPlatformOFFICIAL`, '_blank');
-    }
-
-    function actionSMS() {
-        const msg = encodeURIComponent(`বায়োডাটা তথ্য জানতে চাই${getIdText()}`);
-        window.open(`sms:${DISPLAY_PHONE}?body=${msg}`, '_self');
-    }
+const PHONE="8801829890591"; const DP="01829890591";
+window.onload=()=>{let s=localStorage.getItem('user_biodata_id'); if(s) document.getElementById('biodataId').value=s;}
+function getId(){let v=document.getElementById('biodataId').value.trim(); return v?` (আইডি: ${v})`:'';}
+function openWA(){let m=encodeURIComponent(`আসসালামু আলাইকুম, আমি বায়োডাটা সেবা জানতে চাই${getId()}।`); window.open(`https://wa.me/${PHONE}?text=${m}`,'_blank');}
+function openSMS(){let m=encodeURIComponent(`বায়োডাটা তথ্য জানতে চাই${getId()}`); window.open(`sms:${DP}?body=${m}`,'_self');}
 </script>
-
 </body>
-            </html>
-            
+</html>
