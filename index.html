@@ -3,9 +3,13 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব | MD HAMEDUL</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব | MD HAMEDUL
+</title>
 
 <meta name="description"
 content="পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব। বাংলাদেশ ও বিশ্বের বিভিন্ন দেশের পাত্র-পাত্রীর বায়োডাটা দেখুন।">
@@ -16,23 +20,32 @@ content="পাত্র-পাত্রী প্ল্যাটফর্ম �
 <meta property="og:description"
 content="বাংলাদেশ • মধ্যপ্রাচ্য • ইউরোপ • আমেরিকা • এশিয়া • বিশ্বব্যাপী">
 
-<meta property="og:image" content="banner.jpg">
+<meta property="og:image"
+content="banner.png">
 
 <meta property="og:url"
 content="https://hamedul691982.github.io/">
 
-<meta property="og:type" content="website">
+<meta property="og:type"
+content="website">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
 <link rel="preconnect"
 href="https://fonts.gstatic.com"
 crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+<link
+href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
 rel="stylesheet">
 
-<link rel="stylesheet"
+
+<link
+rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
 <style>
 
@@ -64,6 +77,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 }
 
+
 /* =========================================================
    RESET
 ========================================================= */
@@ -72,17 +86,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 margin:0;
 padding:0;
+
 box-sizing:border-box;
 
-font-family:'Hind Siliguri',sans-serif;
+font-family:
+'Hind Siliguri',
+sans-serif;
 
 }
+
 
 html{
 
 scroll-behavior:smooth;
 
 }
+
 
 body{
 
@@ -103,6 +122,7 @@ padding:8px;
 
 }
 
+
 button,
 input,
 select{
@@ -110,6 +130,7 @@ select{
 font-family:inherit;
 
 }
+
 
 /* =========================================================
    MAIN CONTAINER
@@ -121,19 +142,22 @@ max-width:1050px;
 
 margin:auto;
 
-background:rgba(13,29,51,.97);
+background:
+rgba(13,29,51,.97);
 
-border:1px solid var(--border);
+border:
+1px solid var(--border);
 
 border-radius:22px;
 
 overflow:hidden;
 
 box-shadow:
-
-0 20px 60px rgba(0,0,0,.45);
+0 20px 60px
+rgba(0,0,0,.45);
 
 }
+
 
 /* =========================================================
    TOP BAR
@@ -151,9 +175,13 @@ font-size:.86rem;
 
 color:var(--gold2);
 
-border-bottom:1px solid var(--border);
+border-bottom:
+1px solid var(--border);
+
+line-height:1.6;
 
 }
+
 
 /* =========================================================
    HERO
@@ -167,31 +195,65 @@ text-align:center;
 
 }
 
+
+/*
+   IMPORTANT:
+   পোস্টার পুরো দেখানোর জন্য
+   height:auto ব্যবহার করা হয়েছে।
+*/
+
 .banner{
 
 width:100%;
 
-max-height:320px;
+height:auto;
 
-object-fit:cover;
-
-border-radius:18px;
+max-width:100%;
 
 display:block;
 
-margin-bottom:20px;
+margin:0 auto 20px;
 
-border:1px solid var(--border);
+border-radius:18px;
+
+border:
+1px solid var(--border);
+
+background:#050c17;
+
+object-fit:contain;
 
 }
 
+
+/* পোস্টার না থাকলে সুন্দর fallback */
+
+.banner-fallback{
+
+display:none;
+
+padding:40px 20px;
+
+border:
+1px solid var(--border);
+
+border-radius:18px;
+
+background:#081425;
+
+color:var(--gold);
+
+font-size:1.5rem;
+
+font-weight:700;
+
+}
+
+
 .hero h1{
 
-font-size:clamp(
-1.8rem,
-5vw,
-2.7rem
-);
+font-size:
+clamp(1.8rem,5vw,2.7rem);
 
 color:var(--gold);
 
@@ -200,6 +262,7 @@ font-weight:700;
 line-height:1.3;
 
 }
+
 
 .subtitle{
 
@@ -211,6 +274,7 @@ margin-top:7px;
 
 }
 
+
 .coverage{
 
 margin:15px auto 0;
@@ -221,9 +285,11 @@ max-width:800px;
 
 border-radius:13px;
 
-background:rgba(245,197,66,.07);
+background:
+rgba(245,197,66,.07);
 
-border:1px solid var(--border);
+border:
+1px solid var(--border);
 
 color:var(--gold2);
 
@@ -232,6 +298,7 @@ font-weight:600;
 line-height:1.8;
 
 }
+
 
 .admin{
 
@@ -245,15 +312,18 @@ margin-top:15px;
 
 padding:8px 18px;
 
-border:1px solid var(--gold);
+border:
+1px solid var(--gold);
 
 border-radius:30px;
 
 color:var(--gold2);
 
-background:rgba(245,197,66,.07);
+background:
+rgba(245,197,66,.07);
 
 }
+
 
 /* =========================================================
    CONTENT
@@ -261,15 +331,18 @@ background:rgba(245,197,66,.07);
 
 .content{
 
-padding:0 20px 25px;
+padding:
+0 20px 25px;
 
 }
+
 
 .section{
 
 margin-top:24px;
 
 }
+
 
 .section-title{
 
@@ -289,6 +362,7 @@ margin-bottom:13px;
 
 }
 
+
 /* =========================================================
    PRIVACY
 ========================================================= */
@@ -303,7 +377,8 @@ rgba(37,211,102,.07),
 rgba(245,197,66,.06)
 );
 
-border:1px solid var(--border);
+border:
+1px solid var(--border);
 
 border-radius:15px;
 
@@ -315,11 +390,13 @@ color:var(--text);
 
 }
 
+
 .info strong{
 
 color:var(--gold2);
 
 }
+
 
 .privacy-grid{
 
@@ -334,9 +411,11 @@ margin-top:13px;
 
 }
 
+
 .privacy-card{
 
-background:rgba(255,255,255,.045);
+background:
+rgba(255,255,255,.045);
 
 padding:12px;
 
@@ -347,6 +426,7 @@ text-align:center;
 font-size:.9rem;
 
 }
+
 
 .privacy-card i{
 
@@ -360,6 +440,7 @@ margin-bottom:5px;
 
 }
 
+
 /* =========================================================
    BIODATA SEARCH
 ========================================================= */
@@ -368,13 +449,15 @@ margin-bottom:5px;
 
 background:#081425;
 
-border:1px solid rgba(255,255,255,.08);
+border:
+1px solid rgba(255,255,255,.08);
 
 border-radius:16px;
 
 padding:17px;
 
 }
+
 
 .search-grid{
 
@@ -387,6 +470,7 @@ gap:10px;
 
 }
 
+
 .search-input,
 .search-select{
 
@@ -396,7 +480,8 @@ padding:13px;
 
 border-radius:10px;
 
-border:1px solid #34465f;
+border:
+1px solid #34465f;
 
 background:#050c17;
 
@@ -408,12 +493,15 @@ font-size:.95rem;
 
 }
 
+
 .search-input:focus,
 .search-select:focus{
 
-border-color:var(--gold);
+border-color:
+var(--gold);
 
 }
+
 
 .search-btn{
 
@@ -423,7 +511,8 @@ border:0;
 
 border-radius:10px;
 
-background:var(--gold);
+background:
+var(--gold);
 
 color:#111;
 
@@ -433,6 +522,7 @@ cursor:pointer;
 
 }
 
+
 .clear-btn{
 
 margin-top:10px;
@@ -441,7 +531,8 @@ padding:8px 14px;
 
 border-radius:20px;
 
-border:1px solid #52627a;
+border:
+1px solid #52627a;
 
 background:transparent;
 
@@ -450,6 +541,7 @@ color:var(--text);
 cursor:pointer;
 
 }
+
 
 .result-count{
 
@@ -460,6 +552,7 @@ color:var(--muted);
 font-size:.9rem;
 
 }
+
 
 /* =========================================================
    BIODATA CARDS
@@ -476,6 +569,7 @@ gap:14px;
 
 }
 
+
 .biodata-card{
 
 background:
@@ -486,27 +580,32 @@ linear-gradient(
 #0b1b30
 );
 
-border:1px solid rgba(245,197,66,.20);
+border:
+1px solid rgba(245,197,66,.20);
 
 border-radius:17px;
 
 overflow:hidden;
 
 box-shadow:
-
-0 8px 25px rgba(0,0,0,.20);
+0 8px 25px
+rgba(0,0,0,.20);
 
 transition:.2s;
 
 }
 
+
 .biodata-card:hover{
 
-transform:translateY(-3px);
+transform:
+translateY(-3px);
 
-border-color:var(--gold);
+border-color:
+var(--gold);
 
 }
+
 
 .bio-top{
 
@@ -514,7 +613,9 @@ padding:13px 15px;
 
 background:#081425;
 
-border-bottom:1px solid rgba(255,255,255,.07);
+border-bottom:
+1px solid
+rgba(255,255,255,.07);
 
 display:flex;
 
@@ -526,6 +627,7 @@ align-items:center;
 
 }
 
+
 .bio-id{
 
 color:var(--gold2);
@@ -536,6 +638,7 @@ font-size:.9rem;
 
 }
 
+
 .bio-date{
 
 color:var(--muted);
@@ -544,11 +647,13 @@ font-size:.78rem;
 
 }
 
+
 .bio-body{
 
 padding:15px;
 
 }
+
 
 .bio-title{
 
@@ -561,6 +666,7 @@ font-weight:700;
 margin-bottom:10px;
 
 }
+
 
 .bio-line{
 
@@ -578,6 +684,7 @@ line-height:1.5;
 
 }
 
+
 .bio-line i{
 
 color:var(--gold2);
@@ -590,6 +697,7 @@ margin-top:3px;
 
 }
 
+
 .bio-contact{
 
 display:flex;
@@ -599,6 +707,7 @@ gap:8px;
 margin-top:14px;
 
 }
+
 
 .bio-wa{
 
@@ -610,7 +719,8 @@ border:0;
 
 border-radius:9px;
 
-background:var(--green);
+background:
+var(--green);
 
 color:white;
 
@@ -618,7 +728,12 @@ font-weight:700;
 
 cursor:pointer;
 
+text-decoration:none;
+
+text-align:center;
+
 }
+
 
 .bio-details{
 
@@ -626,7 +741,8 @@ padding:10px;
 
 border-radius:9px;
 
-background:rgba(255,255,255,.07);
+background:
+rgba(255,255,255,.07);
 
 color:var(--text);
 
@@ -634,9 +750,12 @@ font-weight:600;
 
 cursor:pointer;
 
-border:1px solid rgba(255,255,255,.08);
+border:
+1px solid
+rgba(255,255,255,.08);
 
 }
+
 
 .bio-hidden{
 
@@ -648,7 +767,8 @@ padding:12px;
 
 border-radius:10px;
 
-background:rgba(0,0,0,.18);
+background:
+rgba(0,0,0,.18);
 
 color:var(--muted);
 
@@ -658,11 +778,13 @@ font-size:.88rem;
 
 }
 
+
 .bio-hidden.show{
 
 display:block;
 
 }
+
 
 /* =========================================================
    NO RESULT
@@ -676,13 +798,15 @@ padding:25px;
 
 text-align:center;
 
-border:1px dashed #53657d;
+border:
+1px dashed #53657d;
 
 border-radius:14px;
 
 color:var(--muted);
 
 }
+
 
 .no-result i{
 
@@ -693,6 +817,7 @@ color:var(--gold);
 margin-bottom:8px;
 
 }
+
 
 /* =========================================================
    SOCIAL
@@ -708,6 +833,7 @@ repeat(3,1fr);
 gap:10px;
 
 }
+
 
 .social-btn{
 
@@ -729,7 +855,9 @@ color:white;
 
 background:#0a1729;
 
-border:1px solid rgba(255,255,255,.08);
+border:
+1px solid
+rgba(255,255,255,.08);
 
 font-weight:600;
 
@@ -737,21 +865,27 @@ transition:.2s;
 
 }
 
+
 .social-btn:hover{
 
-border-color:var(--gold);
+border-color:
+var(--gold);
 
-transform:translateY(-2px);
+transform:
+translateY(-2px);
 
 }
+
 
 .social-btn i{
 
 font-size:1.25rem;
 
-color:var(--facebook);
+color:
+var(--facebook);
 
 }
+
 
 /* =========================================================
    ALBUMS
@@ -767,6 +901,7 @@ repeat(2,1fr);
 gap:10px;
 
 }
+
 
 .album-btn{
 
@@ -788,25 +923,33 @@ color:white;
 
 background:#0a1729;
 
-border:1px solid rgba(255,255,255,.08);
+border:
+1px solid
+rgba(255,255,255,.08);
 
 transition:.2s;
 
 }
 
+
 .album-btn:hover{
 
-border-color:var(--gold);
+border-color:
+var(--gold);
 
-background:rgba(245,197,66,.06);
+background:
+rgba(245,197,66,.06);
 
 }
+
 
 .album-btn i{
 
-color:var(--facebook);
+color:
+var(--facebook);
 
 }
+
 
 /* =========================================================
    CONTACT
@@ -822,6 +965,7 @@ repeat(3,1fr);
 gap:10px;
 
 }
+
 
 .contact-btn{
 
@@ -851,41 +995,53 @@ cursor:pointer;
 
 }
 
+
 .contact-btn i{
 
 font-size:1.5rem;
 
 }
 
+
 .whatsapp{
 
-background:var(--green);
+background:
+var(--green);
 
 }
+
 
 .imo{
 
-background:var(--imo);
+background:
+var(--imo);
 
 }
+
 
 .messenger{
 
-background:var(--facebook);
+background:
+var(--facebook);
 
 }
+
 
 .call{
 
-background:var(--orange);
+background:
+var(--orange);
 
 }
+
 
 .sms{
 
-background:var(--purple);
+background:
+var(--purple);
 
 }
+
 
 /* =========================================================
    SUBMIT
@@ -907,9 +1063,11 @@ rgba(245,197,66,.10),
 rgba(37,211,102,.07)
 );
 
-border:1px solid var(--border);
+border:
+1px solid var(--border);
 
 }
+
 
 .submit h3{
 
@@ -921,6 +1079,7 @@ font-size:1.3rem;
 
 }
 
+
 .submit p{
 
 color:var(--text);
@@ -928,6 +1087,7 @@ color:var(--text);
 line-height:1.7;
 
 }
+
 
 .submit-btn{
 
@@ -943,7 +1103,8 @@ padding:12px 22px;
 
 border-radius:10px;
 
-background:var(--green);
+background:
+var(--green);
 
 color:white;
 
@@ -952,6 +1113,7 @@ text-decoration:none;
 font-weight:700;
 
 }
+
 
 /* =========================================================
    WARNING
@@ -965,9 +1127,12 @@ padding:15px;
 
 border-radius:12px;
 
-background:rgba(255,107,0,.07);
+background:
+rgba(255,107,0,.07);
 
-border:1px solid rgba(255,107,0,.25);
+border:
+1px solid
+rgba(255,107,0,.25);
 
 color:#ffd8bd;
 
@@ -976,6 +1141,7 @@ line-height:1.7;
 font-size:.9rem;
 
 }
+
 
 /* =========================================================
    FOOTER
@@ -989,7 +1155,9 @@ padding:23px 15px;
 
 background:#050c17;
 
-border-top:1px solid rgba(255,255,255,.08);
+border-top:
+1px solid
+rgba(255,255,255,.08);
 
 color:var(--muted);
 
@@ -998,6 +1166,7 @@ line-height:1.9;
 font-size:.88rem;
 
 }
+
 
 .footer-brand{
 
@@ -1009,6 +1178,7 @@ font-weight:700;
 
 }
 
+
 .copy-btn{
 
 margin-top:8px;
@@ -1017,7 +1187,8 @@ padding:8px 15px;
 
 border-radius:20px;
 
-border:1px solid var(--gold);
+border:
+1px solid var(--gold);
 
 background:transparent;
 
@@ -1026,6 +1197,7 @@ color:var(--gold2);
 cursor:pointer;
 
 }
+
 
 /* =========================================================
    MOBILE
@@ -1039,23 +1211,42 @@ padding:5px;
 
 }
 
+
 .container{
 
 border-radius:16px;
 
 }
 
+
 .content{
 
-padding:0 12px 20px;
+padding:
+0 12px 20px;
 
 }
+
 
 .hero{
 
-padding:15px 12px;
+padding:
+15px 12px;
 
 }
+
+
+.banner{
+
+width:100%;
+
+height:auto;
+
+border-radius:12px;
+
+margin-bottom:15px;
+
+}
+
 
 .privacy-grid{
 
@@ -1064,29 +1255,38 @@ repeat(2,1fr);
 
 }
 
+
 .search-grid{
 
-grid-template-columns:1fr;
+grid-template-columns:
+1fr;
 
 }
+
 
 .biodata-grid{
 
-grid-template-columns:1fr;
+grid-template-columns:
+1fr;
 
 }
+
 
 .social-grid{
 
-grid-template-columns:1fr;
+grid-template-columns:
+1fr;
 
 }
+
 
 .album-grid{
 
-grid-template-columns:1fr;
+grid-template-columns:
+1fr;
 
 }
+
 
 .contact-grid{
 
@@ -1096,18 +1296,22 @@ repeat(2,1fr);
 }
 
 }
+
 
 @media(max-width:380px){
 
 .privacy-grid{
 
-grid-template-columns:1fr;
+grid-template-columns:
+1fr;
 
 }
 
+
 .contact-grid{
 
-grid-template-columns:1fr;
+grid-template-columns:
+1fr;
 
 }
 
@@ -1117,21 +1321,26 @@ grid-template-columns:1fr;
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
+
 <!-- =====================================================
-     TOP
+     TOP BAR
 ===================================================== -->
 
 <div class="topbar">
 
 <i class="fa-solid fa-shield-halved"></i>
 
-বিশ্বাসযোগ্য পরিচয় • দায়িত্বশীল যোগাযোগ • গোপনীয়তার প্রতি সম্মান
+বিশ্বাসযোগ্য পরিচয় • দায়িত্বশীল যোগাযোগ •
+গোপনীয়তার প্রতি সম্মান
 
 </div>
+
 
 
 <!-- =====================================================
@@ -1140,12 +1349,30 @@ grid-template-columns:1fr;
 
 <section class="hero">
 
+
 <img
-src="banner.jpg"
-alt="পাত্র-পাত্রী প্ল্যাটফর্ম"
+
+src="banner.png"
+
+alt="পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব"
+
 class="banner"
-onerror="this.style.display='none'"
+
+id="mainBanner"
+
+onerror="showBannerError()"
+
 >
+
+
+<div
+id="bannerFallback"
+class="banner-fallback">
+
+পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব
+
+</div>
+
 
 <h1>
 
@@ -1153,17 +1380,20 @@ onerror="this.style.display='none'"
 
 </h1>
 
+
 <p class="subtitle">
 
 সঠিক মানুষ, সুন্দর জীবন • সমগ্র বিশ্ব
 
 </p>
 
+
 <div class="coverage">
 
 🌍 বাংলাদেশ • মধ্যপ্রাচ্য • ইউরোপ • আমেরিকা • এশিয়া • বিশ্বব্যাপী
 
 </div>
+
 
 <div class="admin">
 
@@ -1173,10 +1403,13 @@ onerror="this.style.display='none'"
 
 </div>
 
+
 </section>
 
 
+
 <div class="content">
+
 
 
 <!-- =====================================================
@@ -1184,6 +1417,7 @@ onerror="this.style.display='none'"
 ===================================================== -->
 
 <section class="section">
+
 
 <div class="section-title">
 
@@ -1193,17 +1427,26 @@ onerror="this.style.display='none'"
 
 </div>
 
+
 <div class="info">
+
 
 <p>
 
-🔐 <strong>পরিচয় গোপন রেখে বায়োডাটা প্রকাশের ব্যবস্থা করা হয়।</strong>
+🔐
 
-সর্বসাধারণের জন্য প্রকাশিত বায়োডাটায় ব্যক্তিগত ও সংবেদনশীল তথ্য সীমিত রাখা হবে।
+<strong>
+পরিচয় গোপন রেখে বায়োডাটা প্রকাশের ব্যবস্থা করা হয়।
+</strong>
+
+সর্বসাধারণের জন্য প্রকাশিত বায়োডাটায়
+ব্যক্তিগত ও সংবেদনশীল তথ্য সীমিত রাখা হবে।
 
 </p>
 
+
 <div class="privacy-grid">
+
 
 <div class="privacy-card">
 
@@ -1213,6 +1456,7 @@ onerror="this.style.display='none'"
 
 </div>
 
+
 <div class="privacy-card">
 
 <i class="fa-solid fa-user-secret"></i>
@@ -1220,6 +1464,7 @@ onerror="this.style.display='none'"
 পরিচয় গোপন
 
 </div>
+
 
 <div class="privacy-card">
 
@@ -1229,6 +1474,7 @@ onerror="this.style.display='none'"
 
 </div>
 
+
 <div class="privacy-card">
 
 <i class="fa-solid fa-circle-check"></i>
@@ -1237,6 +1483,7 @@ onerror="this.style.display='none'"
 
 </div>
 
+
 </div>
 
 </div>
@@ -1244,11 +1491,13 @@ onerror="this.style.display='none'"
 </section>
 
 
+
 <!-- =====================================================
-     BIODATA SEARCH
+     SEARCH
 ===================================================== -->
 
 <section class="section">
+
 
 <div class="section-title">
 
@@ -1258,61 +1507,107 @@ onerror="this.style.display='none'"
 
 </div>
 
+
 <div class="search-box">
+
 
 <div class="search-grid">
 
+
 <input
+
 type="text"
+
 id="searchInput"
+
 class="search-input"
+
 placeholder="ID / জেলা / পাত্র / পাত্রী লিখুন..."
+
 oninput="filterBiodata()"
+
 >
 
+
 <select
+
 id="genderFilter"
+
 class="search-select"
+
 onchange="filterBiodata()"
+
 >
 
-<option value="">সবাই</option>
+<option value="">
+সবাই
+</option>
 
-<option value="পাত্র">পাত্র</option>
+<option value="পাত্র">
+পাত্র
+</option>
 
-<option value="পাত্রী">পাত্রী</option>
+<option value="পাত্রী">
+পাত্রী
+</option>
 
 </select>
+
 
 
 <select
+
 id="countryFilter"
+
 class="search-select"
+
 onchange="filterBiodata()"
+
 >
 
-<option value="">সব এলাকা</option>
+<option value="">
+সব এলাকা
+</option>
 
-<option value="বাংলাদেশ">বাংলাদেশ</option>
+<option value="বাংলাদেশ">
+বাংলাদেশ
+</option>
 
-<option value="কানাডা">কানাডা</option>
+<option value="কানাডা">
+কানাডা
+</option>
 
-<option value="মালয়েশিয়া">মালয়েশিয়া</option>
+<option value="মালয়েশিয়া">
+মালয়েশিয়া
+</option>
 
-<option value="মধ্যপ্রাচ্য">মধ্যপ্রাচ্য</option>
+<option value="মধ্যপ্রাচ্য">
+মধ্যপ্রাচ্য
+</option>
 
-<option value="ইউরোপ">ইউরোপ</option>
+<option value="ইউরোপ">
+ইউরোপ
+</option>
 
-<option value="আমেরিকা">আমেরিকা</option>
+<option value="আমেরিকা">
+আমেরিকা
+</option>
 
-<option value="এশিয়া">এশিয়া</option>
+<option value="এশিয়া">
+এশিয়া
+</option>
 
 </select>
+
 
 
 <button
+
 class="search-btn"
-onclick="filterBiodata()">
+
+onclick="filterBiodata()"
+
+>
 
 <i class="fa-solid fa-search"></i>
 
@@ -1320,11 +1615,18 @@ onclick="filterBiodata()">
 
 </button>
 
+
 </div>
 
+
+
 <button
+
 class="clear-btn"
-onclick="clearSearch()">
+
+onclick="clearSearch()"
+
+>
 
 <i class="fa-solid fa-xmark"></i>
 
@@ -1332,24 +1634,32 @@ onclick="clearSearch()">
 
 </button>
 
+
 <div
+
 class="result-count"
-id="resultCount">
+
+id="resultCount"
+
+>
 
 মোট বায়োডাটা: 0
 
 </div>
+
 
 </div>
 
 </section>
 
 
+
 <!-- =====================================================
-     ALL BIODATA
+     BIODATA
 ===================================================== -->
 
 <section class="section">
+
 
 <div class="section-title">
 
@@ -1361,24 +1671,35 @@ id="resultCount">
 
 
 <div
+
 id="biodataGrid"
-class="biodata-grid">
+
+class="biodata-grid"
+
+>
 </div>
 
 
 <div
+
 id="noResult"
-class="no-result">
+
+class="no-result"
+
+>
 
 <i class="fa-solid fa-folder-open"></i>
 
 <br>
 
-এই অনুসন্ধানের সাথে মিলে যাওয়া কোনো বায়োডাটা পাওয়া যায়নি।
+এই অনুসন্ধানের সাথে মিলে যাওয়া কোনো
+বায়োডাটা পাওয়া যায়নি।
 
 </div>
 
+
 </section>
+
 
 
 <!-- =====================================================
@@ -1386,6 +1707,7 @@ class="no-result">
 ===================================================== -->
 
 <section class="section">
+
 
 <div class="section-title">
 
@@ -1395,14 +1717,21 @@ class="no-result">
 
 </div>
 
+
 <div class="social-grid">
 
 
 <a
+
 href="https://www.facebook.com/PatroPatriPlatformOFFICIAL"
+
 target="_blank"
+
 rel="noopener"
-class="social-btn">
+
+class="social-btn"
+
+>
 
 <i class="fa-brands fa-facebook"></i>
 
@@ -1411,11 +1740,18 @@ Facebook Page
 </a>
 
 
+
 <a
+
 href="https://www.facebook.com/patropatri.platform"
+
 target="_blank"
+
 rel="noopener"
-class="social-btn">
+
+class="social-btn"
+
+>
 
 <i class="fa-brands fa-facebook"></i>
 
@@ -1424,11 +1760,18 @@ Facebook Profile
 </a>
 
 
+
 <a
+
 href="https://www.facebook.com/share/g/1EjnGVzL69/"
+
 target="_blank"
+
 rel="noopener"
-class="social-btn">
+
+class="social-btn"
+
+>
 
 <i class="fa-solid fa-users"></i>
 
@@ -1442,11 +1785,13 @@ Facebook Group
 </section>
 
 
+
 <!-- =====================================================
      FACEBOOK ALBUMS
 ===================================================== -->
 
 <section class="section">
+
 
 <div class="section-title">
 
@@ -1463,6 +1808,7 @@ Facebook বায়োডাটা অ্যালবাম
 <a
 href="https://www.facebook.com/share/p/1DakgfxWFj/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>১ নম্বর অ্যালবাম</span>
@@ -1475,6 +1821,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/19N8SWZYAG/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>২ নম্বর অ্যালবাম</span>
@@ -1487,6 +1834,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/189K2mTeFb/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>৩ নম্বর অ্যালবাম</span>
@@ -1499,6 +1847,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/1M8KRoYvtQ/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>৪ নম্বর অ্যালবাম</span>
@@ -1511,6 +1860,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/1Em29EF52j/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>৫ নম্বর অ্যালবাম</span>
@@ -1523,6 +1873,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/1KDjrYVWyT/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>৬ নম্বর অ্যালবাম</span>
@@ -1535,6 +1886,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/1LtYkVxhGt/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>৭ নম্বর অ্যালবাম</span>
@@ -1547,6 +1899,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/1ERrKTDF3Z/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>৮ নম্বর অ্যালবাম</span>
@@ -1559,6 +1912,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/14mWScbRVPV/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>৯ নম্বর অ্যালবাম</span>
@@ -1571,6 +1925,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/14oRSNo5Mjx/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>১০ নম্বর অ্যালবাম</span>
@@ -1583,6 +1938,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/197fdZVWnF/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>১১ নম্বর অ্যালবাম</span>
@@ -1595,6 +1951,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/1F6RnRYrJ8/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>১২ নম্বর অ্যালবাম</span>
@@ -1607,6 +1964,7 @@ class="album-btn">
 <a
 href="https://www.facebook.com/share/p/1HVxHHhMno/"
 target="_blank"
+rel="noopener"
 class="album-btn">
 
 <span>১৩ নম্বর অ্যালবাম</span>
@@ -1621,99 +1979,7 @@ class="album-btn">
 </section>
 
 
+
 <!-- =====================================================
      DIRECT CONTACT
-===================================================== -->
-
-<section class="section">
-
-<div class="section-title">
-
-<i class="fa-solid fa-headset"></i>
-
-সরাসরি যোগাযোগ
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<a
-href="https://wa.me/8801829890591"
-target="_blank"
-class="contact-btn whatsapp">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-WhatsApp
-
-</a>
-
-
-<button
-onclick="openIMO()"
-class="contact-btn imo">
-
-<i class="fa-solid fa-comments"></i>
-
-IMO
-
-</button>
-
-
-<a
-href="https://m.me/PatroPatriPlatformOFFICIAL"
-target="_blank"
-class="contact-btn messenger">
-
-<i class="fa-brands fa-facebook-messenger"></i>
-
-Messenger
-
-</a>
-
-
-<a
-href="tel:01829890591"
-class="contact-btn call">
-
-<i class="fa-solid fa-phone"></i>
-
-Direct Call
-
-</a>
-
-
-<a
-href="sms:01829890591"
-class="contact-btn sms">
-
-<i class="fa-solid fa-comment-sms"></i>
-
-SMS
-
-</a>
-
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     SUBMIT
-===================================================== -->
-
-<section class="section">
-
-<div class="section-title">
-
-<i class="fa-solid fa-file-circle-plus"></i>
-
-বায়োডাটা জমা দিন
-
-</div>
-
-
-<div cl
+===================================================== 
