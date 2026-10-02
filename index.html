@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 
 <meta charset="UTF-8">
@@ -25,7 +26,12 @@ rel="stylesheet">
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+
 <style>
+
+/* =====================================================
+   মূল ওয়েবসাইট
+===================================================== */
 
 *{
 box-sizing:border-box;
@@ -53,7 +59,228 @@ width:min(1100px,94%);
 margin:auto;
 }
 
-/* TOP BAR */
+
+/* =====================================================
+   TOP POSTER
+===================================================== */
+
+.poster-top{
+width:100%;
+background:#0d1b2a;
+padding:12px 8px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.poster-top *{
+box-sizing:border-box;
+}
+
+.poster-container{
+width:100%;
+max-width:480px;
+background:linear-gradient(135deg,#0b1d3a 0%,#050b14 100%);
+border:4px solid #ffcc00;
+border-radius:12px;
+padding:15px;
+color:#ffffff;
+position:relative;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+font-family:'SolaimanLipi',"Noto Sans Bengali",Arial,sans-serif;
+}
+
+.poster-top .top-badge{
+position:absolute;
+top:15px;
+right:15px;
+background:linear-gradient(135deg,#ffcc00,#ff9900);
+color:#050b14;
+padding:8px 12px;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
+font-size:13px;
+border:2px solid #ffffff;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:10;
+}
+
+.poster-top .poster-header{
+text-align:center;
+margin-top:10px;
+position:relative;
+padding-top:8px;
+}
+
+.poster-top .logo-icon{
+font-size:35px;
+color:#ffcc00;
+}
+
+.poster-top .main-title{
+font-size:32px;
+color:#ffcc00;
+font-weight:bold;
+text-shadow:2px 2px 4px rgba(0,0,0,0.7);
+margin:5px 0;
+}
+
+.poster-top .sub-title{
+font-size:18px;
+background:#ffcc00;
+color:#050b14;
+display:inline-block;
+padding:2px 15px;
+border-radius:20px;
+font-weight:bold;
+}
+
+.poster-top .tagline{
+margin-top:8px;
+font-size:15px;
+color:#ffffff;
+background:rgba(255,204,0,0.2);
+display:inline-block;
+padding:4px 15px;
+border-radius:15px;
+border:1px solid #ffcc00;
+}
+
+.poster-top .countries{
+margin:10px 0;
+font-size:13px;
+text-align:center;
+background:rgba(0,50,100,0.6);
+padding:6px;
+border-radius:8px;
+border:1px solid #1e90ff;
+}
+
+.poster-top .poster-features{
+display:flex;
+justify-content:space-between;
+gap:5px;
+margin:10px 0;
+}
+
+.poster-top .feature-box{
+background:rgba(0,30,60,0.8);
+border:2px solid #ffcc00;
+border-radius:10px;
+text-align:center;
+padding:8px 4px;
+width:25%;
+font-size:11px;
+font-weight:bold;
+}
+
+.poster-top .free-btn{
+display:block;
+background:linear-gradient(90deg,#ffcc00,#ff9900);
+color:#050b14;
+text-align:center;
+padding:10px;
+border-radius:25px;
+font-weight:bold;
+font-size:16px;
+margin:10px 0;
+box-shadow:0 4px 10px rgba(255,204,0,0.3);
+cursor:pointer;
+}
+
+.poster-top .admin-box{
+background:rgba(0,0,0,0.6);
+border:2px solid #ffcc00;
+border-radius:25px;
+padding:8px 15px;
+text-align:center;
+margin:10px 0;
+font-size:16px;
+font-weight:bold;
+color:#ffcc00;
+}
+
+.poster-top .poster-section-box{
+background:rgba(0,20,40,0.9);
+border:1px solid #ffcc00;
+border-radius:8px;
+padding:8px;
+margin-top:8px;
+}
+
+.poster-top .poster-section-title{
+font-size:14px;
+color:#ffcc00;
+margin-bottom:6px;
+font-weight:bold;
+}
+
+.poster-top .poster-social-grid{
+display:flex;
+gap:5px;
+justify-content:space-between;
+}
+
+.poster-top .poster-social-btn{
+flex:1;
+background:#0077ff;
+color:white;
+text-align:center;
+padding:6px 2px;
+border-radius:6px;
+font-size:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.poster-top .poster-whatsapp{
+background:#25d366;
+}
+
+.poster-top .poster-imo{
+background:#0088cc;
+}
+
+.poster-top .poster-messenger{
+background:#0099ff;
+}
+
+.poster-top .poster-call{
+background:#ff6600;
+}
+
+.poster-top .poster-album-grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:4px;
+}
+
+.poster-top .poster-album-btn{
+background:#0055ff;
+color:white;
+text-align:center;
+padding:5px 2px;
+border-radius:4px;
+font-size:10px;
+text-decoration:none;
+}
+
+.poster-top .poster-footer{
+text-align:center;
+margin-top:10px;
+font-size:11px;
+background:linear-gradient(90deg,#332200,#664400);
+padding:6px;
+border-radius:6px;
+border:1px solid #ffcc00;
+word-break:break-word;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
 
 .topbar{
 background:#06182d;
@@ -64,7 +291,10 @@ font-size:13px;
 font-weight:600;
 }
 
-/* HERO */
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
 background:linear-gradient(135deg,#06182d,#0b3152,#071b33);
@@ -74,21 +304,10 @@ text-align:center;
 border-bottom:4px solid #d6ae45;
 }
 
-.banner-wrap{
-width:min(1000px,100%);
-margin:0 auto 18px;
-border-radius:16px;
-overflow:hidden;
-background:#071b33;
-box-shadow:0 8px 25px rgba(0,0,0,.30);
-}
 
-.banner-wrap img{
-display:block;
-width:100%;
-height:auto;
-object-fit:contain;
-}
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .hero-title{
 font-size:24px;
@@ -119,8 +338,6 @@ font-weight:700;
 margin-bottom:18px;
 }
 
-/* CONTACT */
-
 .contact-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -148,19 +365,19 @@ transition:.2s;
 transform:translateY(-2px);
 }
 
-.whatsapp{
+.contact-btn.whatsapp{
 background:#128c4a;
 }
 
-.imo{
+.contact-btn.imo{
 background:#2467d6;
 }
 
-.messenger{
+.contact-btn.messenger{
 background:#1687e8;
 }
 
-.call{
+.contact-btn.call{
 background:#16a34a;
 }
 
@@ -199,7 +416,10 @@ background:#155e75;
 background:#1877f2;
 }
 
-/* SECTION */
+
+/* =====================================================
+   SECTION
+===================================================== */
 
 .section{
 background:white;
@@ -222,7 +442,10 @@ color:#b78a24;
 margin-right:6px;
 }
 
-/* INFO */
+
+/* =====================================================
+   INFO
+===================================================== */
 
 .info-grid{
 display:grid;
@@ -243,7 +466,10 @@ color:#0b3152;
 margin-bottom:4px;
 }
 
-/* SEARCH */
+
+/* =====================================================
+   SEARCH
+===================================================== */
 
 .search-box{
 display:grid;
@@ -301,7 +527,10 @@ color:#0b3152;
 margin-bottom:14px;
 }
 
-/* BIODATA */
+
+/* =====================================================
+   BIODATA
+===================================================== */
 
 .biodata-grid{
 display:grid;
@@ -330,10 +559,6 @@ padding:14px;
 .bio-line{
 margin:4px 0;
 font-size:14px;
-}
-
-.bio-line strong{
-color:#0b3152;
 }
 
 .details{
@@ -370,7 +595,10 @@ color:white;
 font-weight:700;
 }
 
-/* FACEBOOK */
+
+/* =====================================================
+   FACEBOOK
+===================================================== */
 
 .fb-list{
 display:grid;
@@ -391,7 +619,10 @@ font-weight:700;
 font-size:14px;
 }
 
-/* FORM */
+
+/* =====================================================
+   FORM
+===================================================== */
 
 .form-grid{
 display:grid;
@@ -428,7 +659,10 @@ font-weight:800;
 cursor:pointer;
 }
 
-/* WEBSITE */
+
+/* =====================================================
+   WEBSITE
+===================================================== */
 
 .website-card{
 background:#071f38;
@@ -453,7 +687,10 @@ border-radius:9px;
 margin:12px 0;
 }
 
-/* FOOTER */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
 background:#06182d;
@@ -471,7 +708,10 @@ font-weight:800;
 margin-bottom:6px;
 }
 
-/* NO RESULT */
+
+/* =====================================================
+   NO RESULT
+===================================================== */
 
 .no-result{
 display:none;
@@ -481,7 +721,10 @@ color:#8a5a00;
 font-weight:700;
 }
 
-/* MOBILE */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:700px){
 
@@ -516,6 +759,14 @@ grid-column:auto;
 padding:15px;
 }
 
+.poster-top .main-title{
+font-size:27px;
+}
+
+.poster-top .poster-album-grid{
+grid-template-columns:repeat(4,1fr);
+}
+
 }
 
 @media(max-width:430px){
@@ -533,36 +784,362 @@ font-size:15px;
 font-size:12px;
 }
 
+.poster-top{
+padding:8px 4px;
+}
+
+.poster-container{
+padding:10px;
+border-width:3px;
+}
+
+.poster-top .top-badge{
+top:10px;
+right:10px;
+font-size:10px;
+padding:6px 8px;
+}
+
+.poster-top .main-title{
+font-size:23px;
+}
+
+.poster-top .sub-title{
+font-size:15px;
+}
+
+.poster-top .tagline{
+font-size:12px;
+}
+
+.poster-top .countries{
+font-size:11px;
+}
+
+.poster-top .feature-box{
+font-size:9px;
+padding:6px 2px;
+}
+
+.poster-top .free-btn{
+font-size:13px;
+}
+
+.poster-top .admin-box{
+font-size:13px;
+}
+
+.poster-top .poster-social-btn{
+font-size:8px;
+}
+
+.poster-top .poster-album-btn{
+font-size:8px;
+}
+
+.poster-top .poster-footer{
+font-size:9px;
+}
+
+}
+
+
+/* ছোট মোবাইলে পোস্টারের ৪টি ফিচার সুন্দর রাখার জন্য */
+
+@media(max-width:350px){
+
+.poster-top .poster-features{
+display:grid;
+grid-template-columns:1fr 1fr;
+}
+
+.poster-top .feature-box{
+width:100%;
+}
+
+.poster-top .poster-social-grid{
+flex-wrap:wrap;
+}
+
+.poster-top .poster-social-btn{
+min-width:30%;
+}
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<div class="topbar">
-বিশ্বাসযোগ্য পরিচয় • দায়িত্বশীল যোগাযোগ • গোপনীয়তার প্রতি সম্মান
+
+<!-- =====================================================
+     একদম সবার উপরে ব্যানার পোস্টার
+===================================================== -->
+
+<section class="poster-top">
+
+<div class="poster-container">
+
+<div class="top-badge">
+🔒 100%<br>
+গোপনীয়তা<br>
+<span style="font-size:9px;font-weight:normal;">
+পরিচয় গোপন রেখে<br>
+শুধু জেলার নাম প্রকাশ।
+</span>
 </div>
 
 
-<!-- HERO -->
+<div class="poster-header">
+
+<div class="logo-icon">
+💎 💑
+</div>
+
+<div class="main-title">
+পাত্র-পাত্রী প্ল্যাটফর্ম
+</div>
+
+<div class="sub-title">
+সমগ্র বিশ্ব
+</div>
+
+<div>
+<div class="tagline">
+✨ সঠিক মানুষ, সুন্দর জীবন ✨
+</div>
+</div>
+
+</div>
+
+
+<div class="countries">
+🌍 বাংলাদেশ • মধ্যপ্রাচ্য • ইউরোপ • আমেরিকা • এশিয়া • বিশ্বব্যাপী
+</div>
+
+
+<div class="poster-features">
+
+<div class="feature-box">
+🛡️<br>
+100% গোপনীয়তা
+</div>
+
+<div class="feature-box">
+👤<br>
+পরিচয় গোপন
+</div>
+
+<div class="feature-box">
+🤝<br>
+দায়িত্বশীল যোগাযোগ
+</div>
+
+<div class="feature-box">
+✅<br>
+তথ্য যাচাই করুন
+</div>
+
+</div>
+
+
+<a href="#submitBiodata"
+class="free-btn">
+📝 ফ্রিতে বায়োডাটা জমা দিন ➔
+</a>
+
+
+<div class="admin-box">
+👨‍💼 অ্যাডমিন: MD HAMEDUL
+</div>
+
+
+<!-- POSTER SOCIAL -->
+
+<div class="poster-section-box">
+
+<div class="poster-section-title">
+👤 আমাদের সাথে যুক্ত থাকুন
+</div>
+
+<div class="poster-social-grid">
+
+<a
+href="https://www.facebook.com/PatroPatriPlatformOFFICIAL"
+target="_blank"
+class="poster-social-btn">
+
+📘 Facebook Page
+
+</a>
+
+<a
+href="https://www.facebook.com/patropatri.platform"
+target="_blank"
+class="poster-social-btn">
+
+📘 Facebook Profile
+
+</a>
+
+<a
+href="https://www.facebook.com/share/g/1EjnGVzL69/"
+target="_blank"
+class="poster-social-btn">
+
+👥 Facebook Group
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- POSTER CONTACT -->
+
+<div class="poster-section-box">
+
+<div class="poster-section-title">
+📞 সরাসরি যোগাযোগ
+</div>
+
+<div class="poster-social-grid">
+
+<a
+href="https://wa.me/8801829890591"
+target="_blank"
+class="poster-social-btn poster-whatsapp">
+
+💬 WhatsApp
+
+</a>
+
+<a
+href="javascript:openIMO();"
+class="poster-social-btn poster-imo">
+
+📱 IMO
+
+</a>
+
+<a
+href="https://m.me/PatroPatriPlatformOFFICIAL"
+target="_blank"
+class="poster-social-btn poster-messenger">
+
+💬 Messenger
+
+</a>
+
+<a
+href="tel:01829890591"
+class="poster-social-btn poster-call">
+
+📞 Direct Call
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- POSTER ALBUM -->
+
+<div class="poster-section-box">
+
+<div class="poster-section-title">
+📁 Facebook বায়োডাটা অ্যালবাম
+</div>
+
+<div class="poster-album-grid">
+
+<a href="https://www.facebook.com/share/p/1DakgfxWFj/"
+target="_blank" class="poster-album-btn">📘 ১</a>
+
+<a href="https://www.facebook.com/share/p/19N8SWZYAG/"
+target="_blank" class="poster-album-btn">📘 ২</a>
+
+<a href="https://www.facebook.com/share/p/189K2mTeFb/"
+target="_blank" class="poster-album-btn">📘 ৩</a>
+
+<a href="https://www.facebook.com/share/p/1M8KRoYvtQ/"
+target="_blank" class="poster-album-btn">📘 ৪</a>
+
+<a href="https://www.facebook.com/share/p/1Em29EF52j/"
+target="_blank" class="poster-album-btn">📘 ৫</a>
+
+<a href="https://www.facebook.com/share/p/1KDjrYVWyT/"
+target="_blank" class="poster-album-btn">📘 ৬</a>
+
+<a href="https://www.facebook.com/share/p/1LtYkVxhGt/"
+target="_blank" class="poster-album-btn">📘 ৭</a>
+
+<a href="https://www.facebook.com/share/p/1ERrKTDF3Z/"
+target="_blank" class="poster-album-btn">📘 ৮</a>
+
+<a href="https://www.facebook.com/share/p/14mWScbRVPV/"
+target="_blank" class="poster-album-btn">📘 ৯</a>
+
+<a href="https://www.facebook.com/share/p/14oRSNo5Mjx/"
+target="_blank" class="poster-album-btn">📘 ১০</a>
+
+<a href="https://www.facebook.com/share/p/197fdZVWnF/"
+target="_blank" class="poster-album-btn">📘 ১১</a>
+
+<a href="https://www.facebook.com/share/p/1F6RnRYrJ8/"
+target="_blank" class="poster-album-btn">📘 ১২</a>
+
+<a href="https://www.facebook.com/share/p/1HVxHHhMno/"
+target="_blank" class="poster-album-btn">📘 ১৩</a>
+
+</div>
+
+</div>
+
+
+<div class="poster-footer">
+
+❤️ আপনার একটি লাইক, কমেন্ট, শেয়ার ও ফলো —
+হতে পারে কারো জীবনের নতুন অধ্যায়!
+
+<br>
+
+🌐 ওয়েবসাইট:
+hamedul691982.github.io
+
+<br>
+
+📞 যোগাযোগ:
+01829890591
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="topbar">
+
+বিশ্বাসযোগ্য পরিচয় • দায়িত্বশীল যোগাযোগ • গোপনীয়তার প্রতি সম্মান
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <header class="hero">
-
-<div class="banner-wrap">
-
-<img
-src="banner.png"
-alt="পাত্র-পাত্রী প্ল্যাটফর্ম"
-onerror="this.style.display='none';document.getElementById('bannerFallback').style.display='block';">
-
-<div id="bannerFallback"
-style="display:none;padding:55px 15px;color:#ffe08a;font-size:22px;font-weight:800;">
-পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব
-</div>
-
-</div>
 
 
 <div class="hero-title">
@@ -571,6 +1148,7 @@ style="display:none;padding:55px 15px;color:#ffe08a;font-size:22px;font-weight:8
 
 
 <div class="contact-grid">
+
 
 <a
 href="https://wa.me/8801829890591"
@@ -613,6 +1191,7 @@ Direct Call
 
 </a>
 
+
 </div>
 
 
@@ -625,27 +1204,39 @@ style="width:100%;max-width:650px;margin:auto;">
 
 <i class="fa-solid fa-copy"></i>
 
-Admin WhatsApp + IMO: 01829890591 — নম্বর কপি করুন
+Admin WhatsApp + IMO:
+01829890591 — নম্বর কপি করুন
 
 </button>
 
 </div>
 
 
-<div class="hero-subtitle" style="margin-top:15px;">
+<div
+class="hero-subtitle"
+style="margin-top:15px;">
+
 সঠিক মানুষ, সুন্দর জীবন • সমগ্র বিশ্ব
+
 </div>
+
 
 <div class="coverage">
+
 বাংলাদেশ • মধ্যপ্রাচ্য • ইউরোপ • আমেরিকা • এশিয়া • বিশ্বব্যাপী
+
 </div>
 
+
 <div class="admin-badge">
+
 Admin: MD HAMEDUL
+
 </div>
 
 
 <div class="quick-actions">
+
 
 <a
 href="https://hamedul691982.github.io/"
@@ -668,10 +1259,15 @@ Facebook Page
 
 </a>
 
+
 </div>
 
 </header>
 
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <main class="container">
 
@@ -681,848 +1277,59 @@ Facebook Page
 <section class="section">
 
 <div class="section-title">
+
 <i class="fa-solid fa-shield-halved"></i>
+
 গোপনীয়তা ও নিরাপত্তা
+
 </div>
+
 
 <div class="info-grid">
 
+
 <div class="info-box">
-<strong>🔐 100% পরিচয় গোপন</strong>
+
+<strong>
+🔐 100% পরিচয় গোপন
+</strong>
+
 পাবলিক বায়োডাটায় প্রয়োজনীয় তথ্য ছাড়া ব্যক্তিগত পরিচয় প্রকাশ করা হয় না।
+
 </div>
 
+
 <div class="info-box">
-<strong>🛡️ দায়িত্বশীল যোগাযোগ</strong>
+
+<strong>
+🛡️ দায়িত্বশীল যোগাযোগ
+</strong>
+
 বিয়ে বা যেকোনো সিদ্ধান্তের আগে তথ্য যাচাই করে নেওয়ার অনুরোধ করা হয়।
+
 </div>
 
+
 <div class="info-box">
-<strong>📋 তথ্য যাচাই</strong>
+
+<strong>
+📋 তথ্য যাচাই
+</strong>
+
 প্রয়োজনীয় ক্ষেত্রে সংশ্লিষ্ট ব্যক্তির কাছ থেকে তথ্য নিশ্চিত করে সিদ্ধান্ত নিন।
+
 </div>
+
 
 <div class="info-box">
-<strong>🆓 সম্পূর্ণ ফ্রি</strong>
+
+<strong>
+🆓 সম্পূর্ণ ফ্রি
+</strong>
+
 বায়োডাটা জমা দেওয়ার জন্য কোনো রেজিস্ট্রেশন বা সার্ভিস চার্জ নেই।
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SEARCH -->
-
-<section class="section">
-
-<div class="section-title">
-<i class="fa-solid fa-magnifying-glass"></i>
-বায়োডাটা সার্চ করুন
-</div>
-
-
-<div class="search-box">
-
-<input
-type="search"
-id="searchInput"
-placeholder="ID / জেলা / পাত্র / পাত্রী লিখুন..."
-oninput="filterBiodata()">
-
-
-<select
-id="genderFilter"
-onchange="filterBiodata()">
-
-<option value="">পাত্র / পাত্রী</option>
-<option value="পুরুষ">পাত্র</option>
-<option value="নারী">পাত্রী</option>
-
-</select>
-
-
-<select
-id="areaFilter"
-onchange="filterBiodata()">
-
-<option value="">এলাকা</option>
-<option value="বাংলাদেশ">বাংলাদেশ</option>
-<option value="কানাডা">কানাডা</option>
-<option value="মালয়েশিয়া">মালয়েশিয়া</option>
-<option value="মধ্যপ্রাচ্য">মধ্যপ্রাচ্য</option>
-<option value="ইউরোপ">ইউরোপ</option>
-<option value="আমেরিকা">আমেরিকা</option>
-<option value="এশিয়া">এশিয়া</option>
-
-</select>
 
 </div>
 
 
-<div class="quick-country">
-
-<button class="country-btn"
-onclick="quickArea('')">
-সব
-</button>
-
-<button class="country-btn"
-onclick="quickArea('বাংলাদেশ')">
-বাংলাদেশ
-</button>
-
-<button class="country-btn"
-onclick="quickArea('কানাডা')">
-কানাডা
-</button>
-
-<button class="country-btn"
-onclick="quickArea('মালয়েশিয়া')">
-মালয়েশিয়া
-</button>
-
-<button class="country-btn"
-onclick="quickArea('মধ্যপ্রাচ্য')">
-মধ্যপ্রাচ্য
-</button>
-
-<button class="country-btn"
-onclick="quickArea('ইউরোপ')">
-ইউরোপ
-</button>
-
-<button class="country-btn"
-onclick="quickArea('আমেরিকা')">
-আমেরিকা
-</button>
-
-<button class="country-btn"
-onclick="quickArea('এশিয়া')">
-এশিয়া
-</button>
-
 </div>
-
-
-<div id="resultCount"
-class="result-count">
-মোট বায়োডাটা: ৪টি
-</div>
-
-
-<div id="biodataGrid"
-class="biodata-grid">
-</div>
-
-
-<div id="noResult"
-class="no-result">
-কোনো বায়োডাটা পাওয়া যায়নি।
-</div>
-
-</section>
-
-
-<!-- WEBSITE -->
-
-<section class="section">
-
-<div class="section-title">
-<i class="fa-solid fa-globe"></i>
-আমাদের ওয়েবসাইট
-</div>
-
-
-<div class="website-card">
-
-<h3>
-পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব
-</h3>
-
-<p>
-বাংলাদেশ ও বিশ্বের বিভিন্ন দেশের পাত্র-পাত্রীর বায়োডাটা দেখুন।
-</p>
-
-
-<a
-href="https://hamedul691982.github.io/"
-target="_blank"
-class="website-link">
-
-https://hamedul691982.github.io/
-
-</a>
-
-
-<div class="quick-actions">
-
-<a
-href="https://hamedul691982.github.io/"
-target="_blank"
-class="quick-btn website-btn">
-
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
-ওয়েবসাইট খুলুন
-
-</a>
-
-
-<button
-onclick="copyWebsite()"
-class="quick-btn copy">
-
-<i class="fa-solid fa-copy"></i>
-ওয়েবসাইট লিংক কপি করুন
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FACEBOOK -->
-
-<section class="section">
-
-<div class="section-title">
-<i class="fa-brands fa-facebook"></i>
-Facebook
-</div>
-
-
-<div class="fb-list">
-
-<a
-href="https://www.facebook.com/PatroPatriPlatformOFFICIAL"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-Facebook Page
-
-</a>
-
-
-<a
-href="https://www.facebook.com/patropatri.platform"
-target="_blank"
-class="fb-link">
-
-<i class="fa-solid fa-user"></i>
-Facebook Profile
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/g/1EjnGVzL69/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-solid fa-users"></i>
-Facebook Group
-
-</a>
-
-</div>
-
-</section>
-
-
-<!-- FACEBOOK BIODATA POSTS -->
-
-<section class="section">
-
-<div class="section-title">
-
-<i class="fa-solid fa-folder-open"></i>
-
-Facebook বায়োডাটা পোস্ট
-
-</div>
-
-
-<div class="fb-list">
-
-
-<a
-href="https://www.facebook.com/share/p/1DakgfxWFj/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 01
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/19N8SWZYAG/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 02
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/189K2mTeFb/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 03
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/1M8KRoYvtQ/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 04
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/1Em29EF52j/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 05
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/1KDjrYVWyT/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 06
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/1LtYkVxhGt/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 07
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/1ERrKTDF3Z/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 08
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/14mWScbRVPV/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 09
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/14oRSNo5Mjx/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 10
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/197fdZVWnF/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 11
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/1F6RnRYrJ8/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 12
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/p/1HVxHHhMno/"
-target="_blank"
-class="fb-link">
-
-<i class="fa-brands fa-facebook"></i>
-বায়োডাটা পোস্ট 13
-
-</a>
-
-</div>
-
-</section>
-
-
-<!-- SUBMIT BIODATA -->
-
-<section class="section">
-
-<div class="section-title">
-
-<i class="fa-solid fa-file-circle-plus"></i>
-
-ফ্রিতে বায়োডাটা জমা দিন
-
-</div>
-
-
-<form onsubmit="submitBiodata(event)">
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label>
-পাত্র / পাত্রী
-</label>
-
-<select id="fGender" required>
-
-<option value="">
-নির্বাচন করুন
-</option>
-
-<option>
-পাত্র
-</option>
-
-<option>
-পাত্রী
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-বয়স
-</label>
-
-<input
-id="fAge"
-type="text"
-placeholder="যেমন: ৩০ বছর">
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-জেলা / দেশ
-</label>
-
-<input
-id="fArea"
-type="text"
-placeholder="যেমন: সিরাজগঞ্জ">
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-শিক্ষাগত যোগ্যতা
-</label>
-
-<input
-id="fEducation"
-type="text"
-placeholder="শিক্ষাগত যোগ্যতা">
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-পেশা
-</label>
-
-<input
-id="fJob"
-type="text"
-placeholder="পেশা / চাকরি / ব্যবসা">
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-আয়
-</label>
-
-<input
-id="fIncome"
-type="text"
-placeholder="মাসিক আয়">
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-বৈবাহিক অবস্থা
-</label>
-
-<select id="fStatus">
-
-<option>
-অবিবাহিত
-</option>
-
-<option>
-তালাকপ্রাপ্ত
-</option>
-
-<option>
-বিধবা / বিপত্নীক
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-যোগাযোগের নম্বর
-</label>
-
-<input
-id="fPhone"
-type="text"
-placeholder="WhatsApp / IMO">
-
-</div>
-
-
-<div class="form-group full">
-
-<label>
-ঠিকানা / অন্যান্য তথ্য
-</label>
-
-<textarea
-id="fDetails"
-rows="5"
-placeholder="প্রয়োজনীয় তথ্য লিখুন"></textarea>
-
-</div>
-
-
-<div class="form-group full">
-
-<label>
-পছন্দ / প্রত্যাশা
-</label>
-
-<textarea
-id="fPreference"
-rows="4"
-placeholder="বয়স, উচ্চতা, শিক্ষা, জেলা, পেশা বা পারিবারিক পছন্দ লিখুন"></textarea>
-
-</div>
-
-</div>
-
-
-<button
-type="submit"
-class="submit-btn">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-WhatsApp-এ বায়োডাটা পাঠান
-
-</button>
-
-</form>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-brand">
-পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব
-</div>
-
-<div>
-Admin: MD HAMEDUL
-</div>
-
-<div>
-Admin WhatsApp + IMO: 01829890591
-</div>
-
-<div style="margin-top:7px;">
-সঠিক মানুষ, সুন্দর জীবন • সমগ্র বিশ্ব
-</div>
-
-<div style="margin-top:12px;">
-© 2026 পাত্র-পাত্রী প্ল্যাটফর্ম — সর্বস্বত্ব সংরক্ষিত
-</div>
-
-</footer>
-
-
-<script>
-
-/* WEBSITE COPY */
-
-function copyWebsite(){
-
-const website =
-"https://hamedul691982.github.io/";
-
-navigator.clipboard.writeText(website)
-.then(function(){
-
-alert("ওয়েবসাইট লিংক কপি হয়েছে।");
-
-})
-.catch(function(){
-
-prompt(
-"ওয়েবসাইট লিংক কপি করুন:",
-website
-);
-
-});
-
-}
-
-
-/* NUMBER COPY */
-
-function copyNumber(){
-
-const number =
-"01829890591";
-
-navigator.clipboard.writeText(number)
-.then(function(){
-
-alert("Admin WhatsApp + IMO নম্বর কপি হয়েছে।");
-
-})
-.catch(function(){
-
-prompt(
-"নম্বর কপি করুন:",
-number
-);
-
-});
-
-}
-
-
-/* IMO */
-
-function openIMO(){
-
-window.location.href =
-"imo://chat?number=01829890591";
-
-setTimeout(function(){
-
-window.open(
-"https://imo.im/",
-"_blank"
-);
-
-},1000);
-
-}
-
-
-/* BIODATA DATA */
-
-const biodata = [
-
-{
-id:"W Kishoreganj M02",
-date:"03/09/2026",
-gender:"পুরুষ",
-country:"বাংলাদেশ",
-area:"কিশোরগঞ্জ",
-title:"পাত্রের বায়োডাটা",
-details:[
-"জেলা: কিশোরগঞ্জ",
-"বৈবাহিক অবস্থা: অবিবাহিত",
-"পরিচয়: গোপন রাখা হয়েছে"
-]
-},
-
-{
-id:"W সিরাজগঞ্জ B M08",
-date:"29/09/2026",
-gender:"পুরুষ",
-country:"বাংলাদেশ",
-area:"সিরাজগঞ্জ",
-title:"পাত্রের বায়োডাটা",
-details:[
-"বয়স: প্রায় ৩১ বছর",
-"বৈবাহিক অবস্থা: অবিবাহিত",
-"ধর্ম: ইসলাম",
-"জাতীয়তা: বাংলাদেশী",
-"রক্তের গ্রুপ: A+",
-"উচ্চতা: ৫'৩\"",
-"ওজন: ৬৫ কেজি",
-"স্থায়ী জেলা: সিরাজগঞ্জ",
-"বর্তমান অবস্থান: ঢাকা",
-"কুরআন/হাদিস/ইমাম প্রশিক্ষণের তথ্য রয়েছে"
-]
-},
-
-{
-id:"W Mymensingh PM01",
-date:"22/09/2026",
-gender:"পুরুষ",
-country:"মালয়েশিয়া",
-area:"ময়মনসিংহ",
-title:"পাত্রের বায়োডাটা",
-details:[
-"কর্মস্থল: মালয়েশিয়া",
-"পেশা: ক্যাশিয়ার",
-"স্থায়ী জেলা: ময়মনসিংহ",
-"উপজেলা: কেন্দুয়া",
-"আয়: প্রায় ১ লাখ টাকা",
-"ব্যবসার জন্য ব্যাংকে অর্থের তথ্য: প্রায় ৫০ লাখ টাকা"
-]
-},
-
-{
-id:"W কানাডা F01",
-date:"14/09/2026",
-gender:"নারী",
-country:"কানাডা",
-area:"কানাডা",
-title:"পাত্রীের বায়োডাটা",
-details:[
-"বয়স: ২৪ বছর",
-"উচ্চতা: ৫'৩\"",
-"ওজন: ৫২ কেজি",
-"পছন্দ: কানাডায় অবস্থানরত পাত্র",
-"পাত্রের বয়স: ২৫–৩২ বছর"
-]
-}
-
-];
-
-
-/* DISPLAY */
-
-function displayBiodata(list){
-
-const grid =
-document.getElementById("biodataGrid");
-
-const noResult =
-document.getElementById("noResult");
-
-grid.innerHTML = "";
-
-if(list.length === 0){
-
-noResult.style.display = "block";
-
-return;
-
-}
-
-noResult.style.display = "none";
-
-
-list.forEach(function(item,index){
-
-const card =
-document.createElement("div");
-
-card.className = "bio-card";
-
-let detailsHTML = "";
-
-item.details.forEach(function(detail){
-
-detailsHTML +=
-"<div class='bio-line'>• "
-+ detail +
-"</div>";
-
-});
-
-
-card.innerHTML = `
-
-<div class="bio-head">
-
-🆔 ${item.id}
-
-<br>
-
-<span style="font-size:12px;">
-D: ${item.date}
-</span>
-
-</div>
-
-
-<div class="bi
