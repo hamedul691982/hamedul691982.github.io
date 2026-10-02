@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,9 +7,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>
-পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব | MD HAMEDUL
-</title>
+<title>পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব | MD HAMEDUL</title>
 
 <meta name="description"
 content="পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব। বাংলাদেশ ও বিশ্বের বিভিন্ন দেশের পাত্র-পাত্রীর বায়োডাটা দেখুন।">
@@ -30,7 +27,6 @@ content="https://hamedul691982.github.io/">
 <meta property="og:type"
 content="website">
 
-
 <link rel="preconnect"
 href="https://fonts.googleapis.com">
 
@@ -38,1488 +34,726 @@ href="https://fonts.googleapis.com">
 href="https://fonts.gstatic.com"
 crossorigin>
 
-
-<link
-href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
 rel="stylesheet">
 
-
-<link
-rel="stylesheet"
+<link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 
 <style>
 
-/* =====================================================
-   ROOT
-===================================================== */
-
 :root{
-
 --navy:#07111f;
 --navy2:#0d1d33;
 --card:#132943;
-
 --gold:#f5c542;
 --gold2:#ffe28a;
-
 --white:#ffffff;
---text:#eaf0f7;
---muted:#aebdce;
-
+--text:#edf4ff;
+--muted:#aebdd0;
 --green:#25D366;
 --facebook:#1877F2;
 --imo:#00a8e8;
---purple:#8a2be2;
---orange:#ff6b00;
-
+--purple:#8b5cf6;
+--orange:#ff9800;
+--red:#ef4444;
 --border:rgba(245,197,66,.25);
-
 }
-
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
-
+box-sizing:border-box;
 margin:0;
 padding:0;
-box-sizing:border-box;
-
-font-family:'Hind Siliguri',sans-serif;
-
 }
-
 
 html{
-
 scroll-behavior:smooth;
-
 }
-
 
 body{
-
+font-family:'Hind Siliguri',sans-serif;
 background:
-radial-gradient(
-circle at top,
-#193455 0%,
-#07111f 48%,
-#03070d 100%
-);
-
-color:var(--white);
-
+radial-gradient(circle at top,#153458 0%,var(--navy) 45%,#030914 100%);
+color:var(--text);
+line-height:1.7;
 min-height:100vh;
-
-padding:8px;
-
 }
 
+a{
+text-decoration:none;
+color:inherit;
+}
 
 button,
 input,
-select{
-
+select,
+textarea{
 font-family:inherit;
-
 }
-
-
-/* =====================================================
-   MAIN CONTAINER
-===================================================== */
 
 .container{
-
+width:94%;
 max-width:1050px;
-
 margin:auto;
-
-background:rgba(13,29,51,.97);
-
-border:1px solid var(--border);
-
-border-radius:22px;
-
-overflow:hidden;
-
-box-shadow:
-0 20px 60px rgba(0,0,0,.45);
-
 }
-
-
-/* =====================================================
-   TOP BAR
-===================================================== */
 
 .topbar{
-
-background:#050c17;
-
-padding:10px 15px;
-
-text-align:center;
-
-font-size:.86rem;
-
-color:var(--gold2);
-
+background:rgba(5,15,29,.95);
 border-bottom:1px solid var(--border);
-
-line-height:1.6;
-
+padding:10px 15px;
+text-align:center;
+font-size:14px;
+color:var(--gold2);
 }
 
+.topbar i{
+margin-right:6px;
+}
 
-/* =====================================================
-   HERO
-===================================================== */
+.main{
+margin:18px auto;
+}
+
+.site-box{
+background:rgba(13,29,51,.95);
+border:1px solid var(--border);
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 15px 50px rgba(0,0,0,.35);
+}
 
 .hero{
-
-padding:20px;
-
+padding:15px;
 text-align:center;
-
 }
 
+.banner-wrap{
+width:100%;
+overflow:hidden;
+border-radius:15px;
+border:1px solid var(--border);
+background:#091525;
+}
 
 .banner{
-
 width:100%;
-
 height:auto;
-
 max-width:100%;
-
 display:block;
-
-margin:0 auto 20px;
-
-border-radius:18px;
-
-border:1px solid var(--border);
-
-background:#050c17;
-
+margin:0 auto;
+border-radius:15px;
 object-fit:contain;
-
 }
 
-
-.hero h1{
-
-font-size:clamp(1.8rem,5vw,2.7rem);
-
-color:var(--gold);
-
+.hero-title{
+margin-top:18px;
+font-size:clamp(25px,5vw,42px);
 font-weight:700;
-
+color:var(--gold);
 line-height:1.3;
-
 }
 
-
-.subtitle{
-
-font-size:1.1rem;
-
-color:var(--text);
-
-margin-top:7px;
-
+.hero-subtitle{
+margin-top:5px;
+font-size:19px;
+font-weight:600;
+color:var(--gold2);
 }
-
 
 .coverage{
-
-margin:15px auto 0;
-
-padding:11px 15px;
-
-max-width:800px;
-
-border-radius:13px;
-
-background:rgba(245,197,66,.07);
-
-border:1px solid var(--border);
-
-color:var(--gold2);
-
-font-weight:600;
-
-line-height:1.8;
-
+margin:10px auto;
+color:var(--muted);
+font-size:15px;
 }
 
-
-.admin{
-
+.admin-badge{
 display:inline-flex;
-
 align-items:center;
-
 gap:8px;
-
-margin-top:15px;
-
-padding:8px 18px;
-
-border:1px solid var(--gold);
-
-border-radius:30px;
-
+padding:8px 15px;
+border:1px solid var(--border);
+border-radius:50px;
+background:rgba(245,197,66,.08);
 color:var(--gold2);
-
-background:rgba(245,197,66,.07);
-
+font-weight:600;
 }
 
+/* BUTTONS */
 
-/* =====================================================
-   CONTENT
-===================================================== */
-
-.content{
-
-padding:0 20px 25px;
-
+.quick-actions{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-top:15px;
 }
 
+.quick-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding:12px;
+border-radius:12px;
+font-weight:700;
+border:1px solid var(--border);
+background:var(--card);
+color:white;
+transition:.2s;
+}
+
+.quick-btn:hover{
+transform:translateY(-2px);
+background:#1a3658;
+}
+
+.quick-btn.website{
+color:#7dd3fc;
+}
+
+.quick-btn.copy{
+color:var(--gold2);
+}
+
+/* SECTIONS */
 
 .section{
-
-margin-top:24px;
-
+padding:20px 17px;
+border-top:1px solid rgba(255,255,255,.06);
 }
-
 
 .section-title{
-
 display:flex;
-
 align-items:center;
-
-gap:9px;
-
-color:var(--gold);
-
-font-size:1.3rem;
-
+gap:10px;
+font-size:23px;
 font-weight:700;
-
-margin-bottom:13px;
-
+color:var(--gold);
+margin-bottom:15px;
 }
 
+.section-title i{
+font-size:21px;
+}
 
-/* =====================================================
-   INFO
-===================================================== */
+/* PRIVACY */
 
-.info{
-
-background:
-linear-gradient(
-135deg,
-rgba(37,211,102,.07),
-rgba(245,197,66,.06)
-);
-
+.privacy-box{
+background:rgba(245,197,66,.06);
 border:1px solid var(--border);
-
 border-radius:15px;
-
-padding:17px;
-
-line-height:1.8;
-
-color:var(--text);
-
+padding:15px;
+margin-bottom:15px;
 }
 
-
-.info strong{
-
+.privacy-box strong{
 color:var(--gold2);
-
 }
-
-
-/* =====================================================
-   PRIVACY
-===================================================== */
 
 .privacy-grid{
-
 display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
+grid-template-columns:repeat(4,1fr);
 gap:10px;
-
-margin-top:13px;
-
 }
-
 
 .privacy-card{
-
-background:rgba(255,255,255,.045);
-
-padding:12px;
-
-border-radius:11px;
-
+background:rgba(255,255,255,.035);
+border:1px solid rgba(255,255,255,.08);
+border-radius:13px;
+padding:13px;
 text-align:center;
-
-font-size:.9rem;
-
+font-size:14px;
 }
-
 
 .privacy-card i{
-
 display:block;
-
+font-size:24px;
 color:var(--gold);
-
-font-size:1.2rem;
-
 margin-bottom:5px;
-
 }
 
-
-/* =====================================================
-   WEBSITE LINK BOX
-===================================================== */
-
-.website-box{
-
-margin-top:20px;
-
-padding:20px;
-
-border-radius:17px;
-
-background:
-linear-gradient(
-135deg,
-rgba(245,197,66,.14),
-rgba(7,17,31,.95)
-);
-
-border:2px solid var(--gold);
-
-text-align:center;
-
-box-shadow:
-0 8px 30px rgba(0,0,0,.30);
-
-}
-
-
-.website-title{
-
-color:var(--gold2);
-
-font-size:1.35rem;
-
-font-weight:700;
-
-margin-bottom:7px;
-
-}
-
-
-.website-url{
-
-display:block;
-
-width:100%;
-
-padding:13px 10px;
-
-margin:12px 0;
-
-border-radius:12px;
-
-background:#02070d;
-
-border:2px solid var(--gold);
-
-color:#ffe28a;
-
-font-size:1rem;
-
-font-weight:700;
-
-word-break:break-all;
-
-text-decoration:none;
-
-}
-
-
-.website-url:hover{
-
-background:#142943;
-
-}
-
-
-.open-website{
-
-display:inline-block;
-
-padding:11px 20px;
-
-border-radius:10px;
-
-background:var(--gold);
-
-color:#07111f;
-
-font-weight:700;
-
-text-decoration:none;
-
-margin:5px;
-
-}
-
-
-.copy-btn-large{
-
-display:block;
-
-width:100%;
-
-padding:12px;
-
-margin-top:8px;
-
-border:2px solid var(--gold);
-
-border-radius:11px;
-
-background:#07111f;
-
-color:var(--gold2);
-
-font-weight:700;
-
-font-size:1rem;
-
-cursor:pointer;
-
-}
-
-
-.copy-btn-large:hover{
-
-background:var(--gold);
-
-color:#07111f;
-
-}
-
-
-.copy-success{
-
-display:none;
-
-margin-top:9px;
-
-color:#7dffb0;
-
-font-weight:700;
-
-}
-
-
-/* =====================================================
-   PHONE COPY BOX
-===================================================== */
-
-.phone-box{
-
-margin-top:18px;
-
-padding:20px;
-
-border-radius:17px;
-
-background:
-linear-gradient(
-135deg,
-rgba(37,211,102,.12),
-rgba(7,17,31,.95)
-);
-
-border:2px solid var(--green);
-
-text-align:center;
-
-box-shadow:
-0 8px 30px rgba(0,0,0,.30);
-
-}
-
-
-.phone-title{
-
-color:#7dffb0;
-
-font-size:1.3rem;
-
-font-weight:700;
-
-}
-
-
-.phone-number{
-
-display:block;
-
-padding:13px;
-
-margin:12px 0;
-
-border-radius:12px;
-
-background:#04130b;
-
-border:2px solid var(--green);
-
-color:#7dffb0;
-
-font-size:1.5rem;
-
-font-weight:700;
-
-letter-spacing:1px;
-
-}
-
-
-.copy-phone{
-
-display:block;
-
-width:100%;
-
-padding:12px;
-
-border:2px solid var(--green);
-
-border-radius:11px;
-
-background:#062015;
-
-color:#7dffb0;
-
-font-weight:700;
-
-font-size:1rem;
-
-cursor:pointer;
-
-}
-
-
-.copy-phone:hover{
-
-background:var(--green);
-
-color:#04130b;
-
-}
-
-
-/* =====================================================
-   SEARCH
-===================================================== */
+/* SEARCH */
 
 .search-box{
-
-background:#081425;
-
+background:rgba(255,255,255,.035);
 border:1px solid rgba(255,255,255,.08);
-
-border-radius:16px;
-
-padding:17px;
-
+border-radius:17px;
+padding:15px;
 }
 
-
-.search-grid{
-
-display:grid;
-
-grid-template-columns:
-2fr 1fr 1fr auto;
-
-gap:10px;
-
-}
-
-
-.search-input,
-.search-select{
-
+.search-input{
 width:100%;
-
-padding:13px;
-
-border-radius:10px;
-
-border:1px solid #34465f;
-
-background:#050c17;
-
+padding:14px 15px;
+border-radius:12px;
+border:1px solid rgba(245,197,66,.3);
+background:#081525;
 color:white;
-
+font-size:16px;
 outline:none;
-
-font-size:.95rem;
-
 }
 
-
-.search-input:focus,
-.search-select:focus{
-
+.search-input:focus{
 border-color:var(--gold);
-
+box-shadow:0 0 0 2px rgba(245,197,66,.1);
 }
 
+.filter-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:10px;
+}
+
+.filter{
+width:100%;
+padding:12px;
+border-radius:11px;
+border:1px solid rgba(245,197,66,.25);
+background:#081525;
+color:white;
+font-size:15px;
+outline:none;
+}
+
+.filter option{
+background:#081525;
+color:white;
+}
+
+.search-buttons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:10px;
+}
+
+.search-btn,
+.clear-btn{
+border:0;
+padding:12px;
+border-radius:11px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+}
 
 .search-btn{
-
-padding:12px 18px;
-
-border:0;
-
-border-radius:10px;
-
 background:var(--gold);
-
 color:#111;
-
-font-weight:700;
-
-cursor:pointer;
-
 }
-
 
 .clear-btn{
-
-margin-top:10px;
-
-padding:8px 14px;
-
-border-radius:20px;
-
-border:1px solid #52627a;
-
-background:transparent;
-
-color:var(--text);
-
-cursor:pointer;
-
+background:#24364d;
+color:white;
 }
-
 
 .result-count{
-
 margin-top:12px;
-
-color:var(--muted);
-
-font-size:.9rem;
-
-}
-
-
-/* =====================================================
-   BIODATA
-===================================================== */
-
-.biodata-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(2,1fr);
-
-gap:14px;
-
-}
-
-
-.biodata-card{
-
-background:
-linear-gradient(
-145deg,
-#142b47,
-#0b1b30
-);
-
-border:1px solid rgba(245,197,66,.20);
-
-border-radius:17px;
-
-overflow:hidden;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,.20);
-
-}
-
-
-.bio-top{
-
-padding:13px 15px;
-
-background:#081425;
-
-border-bottom:1px solid rgba(255,255,255,.07);
-
-display:flex;
-
-justify-content:space-between;
-
-gap:10px;
-
-align-items:center;
-
-}
-
-
-.bio-id{
-
-color:var(--gold2);
-
-font-weight:700;
-
-font-size:.9rem;
-
-}
-
-
-.bio-date{
-
-color:var(--muted);
-
-font-size:.78rem;
-
-}
-
-
-.bio-body{
-
-padding:15px;
-
-}
-
-
-.bio-title{
-
-color:var(--gold);
-
-font-size:1.18rem;
-
-font-weight:700;
-
-margin-bottom:10px;
-
-}
-
-
-.bio-line{
-
-display:flex;
-
-gap:7px;
-
-margin:6px 0;
-
-color:var(--text);
-
-font-size:.91rem;
-
-line-height:1.5;
-
-}
-
-
-.bio-line i{
-
-color:var(--gold2);
-
-width:19px;
-
 text-align:center;
-
-margin-top:3px;
-
-}
-
-
-.bio-contact{
-
-display:flex;
-
-gap:8px;
-
-margin-top:14px;
-
-}
-
-
-.bio-wa{
-
-flex:1;
-
-padding:10px;
-
-border:0;
-
-border-radius:9px;
-
-background:var(--green);
-
-color:white;
-
-font-weight:700;
-
-cursor:pointer;
-
-text-decoration:none;
-
-text-align:center;
-
-}
-
-
-.bio-details{
-
-padding:10px;
-
-border-radius:9px;
-
-background:rgba(255,255,255,.07);
-
-color:var(--text);
-
+color:var(--gold2);
 font-weight:600;
-
-cursor:pointer;
-
-border:1px solid rgba(255,255,255,.08);
-
 }
-
-
-.bio-hidden{
-
-display:none;
-
-margin-top:12px;
-
-padding:12px;
-
-border-radius:10px;
-
-background:rgba(0,0,0,.18);
-
-color:var(--muted);
-
-line-height:1.8;
-
-font-size:.88rem;
-
-}
-
-
-.bio-hidden.show{
-
-display:block;
-
-}
-
 
 .no-result{
-
 display:none;
-
-padding:25px;
-
 text-align:center;
-
-border:1px dashed #53657d;
-
-border-radius:14px;
-
+padding:25px 10px;
 color:var(--muted);
-
 }
 
+/* QUICK COUNTRY */
 
-.no-result i{
-
-font-size:2rem;
-
-color:var(--gold);
-
+.quick-title{
+margin-top:18px;
 margin-bottom:8px;
-
+color:var(--gold2);
+font-weight:600;
 }
 
+.country-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
 
-/* =====================================================
-   POSTER
-===================================================== */
-
-.poster-box{
-
-margin-top:20px;
-
-padding:15px;
-
-border-radius:17px;
-
-background:#081425;
-
+.country-btn{
 border:1px solid var(--border);
-
-text-align:center;
-
+background:#10243d;
+color:white;
+padding:7px 12px;
+border-radius:30px;
+cursor:pointer;
 }
 
+.country-btn:hover{
+background:#1a3b62;
+color:var(--gold2);
+}
 
-.poster-title{
+/* BIODATA */
 
+.biodata-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+margin-top:16px;
+}
+
+.bio-card{
+background:linear-gradient(145deg,#132943,#0b1b2e);
+border:1px solid rgba(245,197,66,.2);
+border-radius:17px;
+padding:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.bio-top{
+display:flex;
+justify-content:space-between;
+gap:8px;
+align-items:flex-start;
+margin-bottom:8px;
+}
+
+.bio-id{
+font-weight:700;
 color:var(--gold);
+}
 
-font-size:1.3rem;
+.bio-date{
+font-size:13px;
+color:var(--muted);
+white-space:nowrap;
+}
 
+.bio-title{
+font-size:20px;
 font-weight:700;
-
-margin-bottom:12px;
-
+color:var(--gold2);
+margin-bottom:8px;
 }
 
-
-.poster-image{
-
-display:block;
-
-width:100%;
-
-height:auto;
-
-max-width:100%;
-
-margin:auto;
-
-border-radius:14px;
-
-border:2px solid var(--gold);
-
-background:#050c17;
-
+.bio-line{
+font-size:14px;
+color:#dce7f5;
+padding:3px 0;
 }
 
+.bio-line i{
+width:20px;
+color:var(--gold);
+}
 
-.poster-open{
+.bio-tags{
+display:flex;
+flex-wrap:wrap;
+gap:6px;
+margin-top:10px;
+}
 
-display:inline-block;
+.tag{
+background:rgba(245,197,66,.08);
+border:1px solid rgba(245,197,66,.2);
+border-radius:20px;
+padding:4px 9px;
+font-size:12px;
+color:var(--gold2);
+}
 
+.details{
+display:none;
 margin-top:12px;
-
-padding:10px 18px;
-
-border-radius:10px;
-
-background:var(--gold);
-
-color:#07111f;
-
-font-weight:700;
-
-text-decoration:none;
-
+padding-top:10px;
+border-top:1px solid rgba(255,255,255,.08);
+color:#d8e5f3;
+font-size:14px;
 }
 
+.details.show{
+display:block;
+}
 
-/* =====================================================
-   SOCIAL
-===================================================== */
+.details-btn{
+margin-top:12px;
+width:100%;
+border:1px solid var(--border);
+background:#172f4c;
+color:var(--gold2);
+padding:9px;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+/* FACEBOOK */
 
 .social-grid{
-
 display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
+grid-template-columns:repeat(3,1fr);
 gap:10px;
-
 }
-
 
 .social-btn{
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
-gap:8px;
-
-padding:14px 10px;
-
-border-radius:11px;
-
-text-decoration:none;
-
-color:white;
-
-background:#0a1729;
-
-border:1px solid rgba(255,255,255,.08);
-
-font-weight:600;
-
+gap:7px;
+padding:12px 8px;
+border-radius:12px;
+font-weight:700;
+font-size:14px;
 }
 
-
-.social-btn:hover{
-
-border-color:var(--gold);
-
+.page{
+background:var(--facebook);
 }
 
-
-.social-btn i{
-
-font-size:1.25rem;
-
-color:var(--facebook);
-
+.profile{
+background:#365899;
 }
 
+.group{
+background:#2563eb;
+}
 
-/* =====================================================
-   ALBUM
-===================================================== */
+/* ALBUM */
 
 .album-grid{
-
 display:grid;
-
-grid-template-columns:
-repeat(2,1fr);
-
+grid-template-columns:repeat(2,1fr);
 gap:10px;
-
 }
 
-
-.album-btn{
-
+.album-link{
 display:flex;
-
 align-items:center;
-
-justify-content:space-between;
-
-gap:10px;
-
-padding:13px 14px;
-
-border-radius:11px;
-
-text-decoration:none;
-
-color:white;
-
-background:#0a1729;
-
+gap:8px;
+background:#10243d;
 border:1px solid rgba(255,255,255,.08);
-
+border-radius:12px;
+padding:12px;
+font-size:14px;
 }
 
-
-.album-btn:hover{
-
-border-color:var(--gold);
-
-background:rgba(245,197,66,.06);
-
-}
-
-
-.album-btn i{
-
+.album-link i{
 color:var(--facebook);
-
 }
 
-
-/* =====================================================
-   CONTACT
-===================================================== */
+/* CONTACT */
 
 .contact-grid{
-
 display:grid;
-
-grid-template-columns:
-repeat(5,1fr);
-
+grid-template-columns:repeat(3,1fr);
 gap:10px;
-
 }
-
 
 .contact-btn{
-
-min-height:80px;
-
 display:flex;
-
-flex-direction:column;
-
 align-items:center;
-
 justify-content:center;
-
-gap:5px;
-
+gap:7px;
+padding:13px 8px;
 border:0;
-
 border-radius:12px;
-
 color:white;
-
-text-decoration:none;
-
 font-weight:700;
-
+font-size:15px;
 cursor:pointer;
-
 }
-
-
-.contact-btn i{
-
-font-size:1.5rem;
-
-}
-
 
 .whatsapp{
-
 background:var(--green);
-
 }
-
 
 .imo{
-
 background:var(--imo);
-
 }
-
 
 .messenger{
-
 background:var(--facebook);
-
 }
-
 
 .call{
-
-background:var(--orange);
-
+background:#16a34a;
 }
-
 
 .sms{
-
 background:var(--purple);
-
 }
 
+.balance{
+background:var(--orange);
+}
 
-/* =====================================================
-   SUBMIT
-===================================================== */
+/* SUBMIT */
 
-.submit{
-
-text-align:center;
-
-padding:20px;
-
-border-radius:16px;
-
-background:
-linear-gradient(
-135deg,
-rgba(245,197,66,.10),
-rgba(37,211,102,.07)
-);
-
+.submit-box{
+background:rgba(245,197,66,.055);
 border:1px solid var(--border);
-
+border-radius:16px;
+padding:16px;
 }
 
-
-.submit h3{
-
-color:var(--gold2);
-
-margin-bottom:6px;
-
-font-size:1.3rem;
-
+.submit-note{
+color:var(--muted);
+font-size:14px;
+margin-bottom:13px;
 }
 
-
-.submit p{
-
-color:var(--text);
-
-line-height:1.7;
-
+.submit-form{
+display:grid;
+gap:10px;
 }
 
+.form-input,
+.form-select,
+.form-textarea{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid rgba(245,197,66,.22);
+background:#081525;
+color:white;
+outline:none;
+font-size:15px;
+}
+
+.form-textarea{
+min-height:110px;
+resize:vertical;
+}
 
 .submit-btn{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:8px;
-
-margin-top:13px;
-
-padding:12px 22px;
-
-border-radius:10px;
-
-background:var(--green);
-
-color:white;
-
-text-decoration:none;
-
+border:0;
+padding:13px;
+border-radius:11px;
+background:var(--gold);
+color:#111;
+font-size:16px;
 font-weight:700;
-
+cursor:pointer;
 }
 
+/* WEBSITE */
 
-/* =====================================================
-   WARNING
-===================================================== */
-
-.warning{
-
-margin-top:20px;
-
-padding:15px;
-
-border-radius:12px;
-
-background:rgba(255,107,0,.07);
-
-border:1px solid rgba(255,107,0,.25);
-
-color:#ffd8bd;
-
-line-height:1.7;
-
-font-size:.9rem;
-
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.footer{
-
+.website-box{
 text-align:center;
-
-padding:23px 15px;
-
-background:#050c17;
-
-border-top:1px solid rgba(255,255,255,.08);
-
-color:var(--muted);
-
-line-height:1.9;
-
-font-size:.88rem;
-
+background:linear-gradient(145deg,#102844,#0a1829);
+border:1px solid var(--border);
+border-radius:17px;
+padding:18px;
 }
 
+.website-url{
+word-break:break-all;
+color:#7dd3fc;
+font-size:15px;
+margin:8px 0 13px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:25px 15px;
+border-top:1px solid rgba(255,255,255,.08);
+color:var(--muted);
+font-size:14px;
+}
 
 .footer-brand{
-
 color:var(--gold);
-
-font-size:1.05rem;
-
+font-size:19px;
 font-weight:700;
-
+margin-bottom:5px;
 }
 
+.footer-links{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin:12px 0;
+}
 
-.footer-website{
-
-display:block;
-
+.footer-links a{
 color:var(--gold2);
-
-font-weight:700;
-
-word-break:break-all;
-
-text-decoration:underline;
-
-margin-top:5px;
-
 }
 
+/* TOAST */
 
-/* =====================================================
-   MOBILE
-===================================================== */
+.toast{
+position:fixed;
+left:50%;
+bottom:25px;
+transform:translate(-50%,120px);
+background:#10243d;
+border:1px solid var(--gold);
+color:white;
+padding:11px 17px;
+border-radius:30px;
+opacity:0;
+transition:.3s;
+z-index:9999;
+box-shadow:0 8px 30px rgba(0,0,0,.4);
+}
+
+.toast.show{
+opacity:1;
+transform:translate(-50%,0);
+}
+
+/* RESPONSIVE */
 
 @media(max-width:700px){
 
-body{
-
-padding:5px;
-
-}
-
-
-.container{
-
-border-radius:16px;
-
-}
-
-
-.content{
-
-padding:0 12px 20px;
-
-}
-
-
-.hero{
-
-padding:15px 12px;
-
-}
-
-
-.banner{
-
-width:100%;
-
-height:auto;
-
-border-radius:12px;
-
-margin-bottom:15px;
-
-}
-
-
 .privacy-grid{
-
-grid-template-columns:
-repeat(2,1fr);
-
+grid-template-columns:repeat(2,1fr);
 }
-
-
-.search-grid{
-
-grid-template-columns:1fr;
-
-}
-
 
 .biodata-grid{
-
 grid-template-columns:1fr;
-
 }
-
 
 .social-grid{
-
 grid-template-columns:1fr;
-
 }
 
+.contact-grid{
+grid-template-columns:repeat(2,1fr);
+}
 
 .album-grid{
-
 grid-template-columns:1fr;
+}
 
 }
 
+@media(max-width:430px){
+
+.container{
+width:96%;
+}
+
+.hero{
+padding:10px;
+}
+
+.section{
+padding:17px 12px;
+}
+
+.quick-actions,
+.filter-grid,
+.search-buttons{
+grid-template-columns:1fr;
+}
 
 .contact-grid{
-
-grid-template-columns:
-repeat(2,1fr);
-
+grid-template-columns:1fr 1fr;
 }
 
-}
-
-
-@media(max-width:380px){
-
-.privacy-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-.contact-grid{
-
-grid-template-columns:1fr;
-
+.hero-title{
+font-size:25px;
 }
 
 }
@@ -1528,475 +762,604 @@ grid-template-columns:1fr;
 
 </head>
 
-
 <body>
 
-
-<div class="container">
-
-
-<!-- =====================================================
-     TOP BAR
-===================================================== -->
-
 <div class="topbar">
-
 <i class="fa-solid fa-shield-halved"></i>
-
-বিশ্বাসযোগ্য পরিচয় • দায়িত্বশীল যোগাযোগ •
-গোপনীয়তার প্রতি সম্মান
-
+বিশ্বাসযোগ্য পরিচয় • দায়িত্বশীল যোগাযোগ • গোপনীয়তার প্রতি সম্মান
 </div>
 
+<main class="container main">
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<div class="site-box">
+
+<!-- HERO -->
 
 <section class="hero">
 
+<div class="banner-wrap">
 
 <img
 src="banner.png"
 alt="পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব"
 class="banner"
 id="mainBanner"
->
+onerror="this.style.display='none';document.getElementById('bannerFallback').style.display='block';">
 
+<div id="bannerFallback"
+style="display:none;padding:45px 15px;text-align:center;color:#f5c542;font-size:22px;font-weight:700;">
+💎 পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব 💎
+</div>
 
-<h1>
+</div>
 
-পাত্র-পাত্রী প্ল্যাটফর্ম
-
+<h1 class="hero-title">
+💎🌸 পাত্র-পাত্রী প্ল্যাটফর্ম — সমগ্র বিশ্ব 🌸💎
 </h1>
 
-
-<p class="subtitle">
-
+<div class="hero-subtitle">
 সঠিক মানুষ, সুন্দর জীবন • সমগ্র বিশ্ব
-
-</p>
-
+</div>
 
 <div class="coverage">
-
-🌍 বাংলাদেশ • মধ্যপ্রাচ্য • ইউরোপ • আমেরিকা • এশিয়া • বিশ্বব্যাপী
-
+বাংলাদেশ • মধ্যপ্রাচ্য • ইউরোপ • আমেরিকা • এশিয়া • বিশ্বব্যাপী
 </div>
 
-
-<div class="admin">
-
+<div class="admin-badge">
 <i class="fa-solid fa-user-shield"></i>
-
-অ্যাডমিন: MD HAMEDUL
-
+Admin: MD HAMEDUL
 </div>
 
-</section>
-
-
-<div class="content">
-
-
-<!-- =====================================================
-     WEBSITE COPY BOX
-===================================================== -->
-
-<section class="section">
-
-
-<div class="website-box">
-
-
-<div class="website-title">
-
-🌐 অফিসিয়াল ওয়েবসাইট
-
-</div>
-
-
-<p>
-
-নিচের লিংকে টাচ করলে সরাসরি ওয়েবসাইট খুলবে।
-
-</p>
-
+<div class="quick-actions">
 
 <a
 href="https://hamedul691982.github.io/"
 target="_blank"
-rel="noopener noreferrer"
-class="website-url"
->
-
-https://hamedul691982.github.io/
-
+class="quick-btn website">
+<i class="fa-solid fa-globe"></i>
+ওয়েবসাইট খুলুন
 </a>
-
-
-<a
-href="https://hamedul691982.github.io/"
-target="_blank"
-rel="noopener noreferrer"
-class="open-website"
->
-
-🌐 ওয়েবসাইট খুলুন
-
-</a>
-
 
 <button
-type="button"
-class="copy-btn-large"
 onclick="copyWebsite()"
->
-
+class="quick-btn copy">
 <i class="fa-solid fa-copy"></i>
-
-ওয়েবসাইট লিংক কপি করুন
-
+ওয়েবসাইটের লিংক কপি করুন
 </button>
 
-
-<div
-id="copySuccess"
-class="copy-success"
->
-
-✅ ওয়েবসাইট লিংক কপি হয়েছে!
-
 </div>
-
-
-</div>
-
 
 </section>
 
 
-<!-- =====================================================
-     PHONE COPY BOX
-===================================================== -->
+<!-- PRIVACY -->
 
 <section class="section">
-
-
-<div class="phone-box">
-
-
-<div class="phone-title">
-
-📱 WhatsApp + IMO + Messenger যোগাযোগ
-
-</div>
-
-
-<p>
-
-যোগাযোগের নম্বরটি কপি করতে নিচের বাটনে টাচ করুন।
-
-</p>
-
-
-<div class="phone-number">
-
-01829890591
-
-</div>
-
-
-<button
-type="button"
-class="copy-phone"
-onclick="copyPhone()"
->
-
-<i class="fa-solid fa-copy"></i>
-
-WhatsApp + IMO + Messenger নম্বর কপি করুন
-
-</button>
-
-
-<div
-id="phoneSuccess"
-class="copy-success"
->
-
-✅ যোগাযোগের নম্বর কপি হয়েছে!
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<!-- =====================================================
-     PRIVACY
-===================================================== -->
-
-<section class="section">
-
 
 <div class="section-title">
-
-<i class="fa-solid fa-lock"></i>
-
-গোপনীয়তা ও দায়িত্বশীলতা
-
+<i class="fa-solid fa-user-lock"></i>
+গোপনীয়তা ও নিরাপত্তা
 </div>
 
+<div class="privacy-box">
 
-<div class="info">
+<strong>🔐 100% পরিচয় গোপন রাখার প্রতি গুরুত্ব দেওয়া হয়।</strong>
 
+<br>
 
-<p>
+সবার নিরাপত্তা ও ব্যক্তিগত গোপনীয়তার বিষয়টি গুরুত্বের সঙ্গে বিবেচনা করা হয়।
+পাবলিক বায়োডাটায় প্রয়োজনীয় তথ্য সীমিতভাবে প্রকাশ করা হবে।
 
-🔐
-
-<strong>
-পরিচয় গোপন রেখে বায়োডাটা প্রকাশের ব্যবস্থা করা হয়।
-</strong>
-
-সর্বসাধারণের জন্য প্রকাশিত বায়োডাটায়
-ব্যক্তিগত ও সংবেদনশীল তথ্য সীমিত রাখা হবে।
-
-</p>
-
+</div>
 
 <div class="privacy-grid">
 
-
 <div class="privacy-card">
-
-<i class="fa-solid fa-location-dot"></i>
-
-শুধু জেলার নাম
-
-</div>
-
-
-<div class="privacy-card">
-
-<i class="fa-solid fa-user-secret"></i>
-
+<i class="fa-solid fa-lock"></i>
 পরিচয় গোপন
-
 </div>
 
-
 <div class="privacy-card">
-
 <i class="fa-solid fa-shield"></i>
-
-দায়িত্বশীল যোগাযোগ
-
+গোপনীয়তা
 </div>
-
 
 <div class="privacy-card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-তথ্য যাচাই করুন
-
+<i class="fa-solid fa-user-check"></i>
+তথ্য যাচাই
 </div>
 
-
+<div class="privacy-card">
+<i class="fa-solid fa-handshake"></i>
+দায়িত্বশীল যোগাযোগ
 </div>
 
-
 </div>
-
 
 </section>
 
 
-<!-- =====================================================
-     POSTER
-     IMPORTANT FILE:
-     poster-01.jpg
-===================================================== -->
+<!-- BIODATA SEARCH -->
 
-<section class="section">
-
-
-<div class="poster-box">
-
-
-<div class="poster-title">
-
-🖼️ পাত্র-পাত্রী প্ল্যাটফর্মের পোস্টার
-
-</div>
-
-
-<img
-src="poster-01.jpg"
-alt="পাত্র-পাত্রী প্ল্যাটফর্ম পোস্টার"
-class="poster-image"
-id="mainPoster"
->
-
-
-<a
-href="poster-01.jpg"
-target="_blank"
-rel="noopener noreferrer"
-class="poster-open"
->
-
-🖼️ পোস্টার বড় করে দেখুন
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-<!-- =====================================================
-     SEARCH
-===================================================== -->
-
-<section class="section">
-
+<section class="section" id="biodataSearch">
 
 <div class="section-title">
-
 <i class="fa-solid fa-magnifying-glass"></i>
-
 বায়োডাটা খুঁজুন
-
 </div>
 
-
 <div class="search-box">
-
-
-<div class="search-grid">
-
 
 <input
 type="text"
 id="searchInput"
 class="search-input"
 placeholder="ID / জেলা / পাত্র / পাত্রী লিখুন..."
-oninput="filterBiodata()"
->
+autocomplete="off">
 
+<div class="filter-grid">
 
-<select
-id="genderFilter"
-class="search-select"
-onchange="filterBiodata()"
->
+<select id="genderFilter" class="filter">
 
-<option value="">
-সবাই
-</option>
-
-<option value="পাত্র">
-পাত্র
-</option>
-
-<option value="পাত্রী">
-পাত্রী
-</option>
+<option value="all">সবাই</option>
+<option value="male">পাত্র</option>
+<option value="female">পাত্রী</option>
 
 </select>
 
+<select id="areaFilter" class="filter">
 
-<select
-id="countryFilter"
-class="search-select"
-onchange="filterBiodata()"
->
-
-<option value="">
-সব এলাকা
-</option>
-
-<option value="বাংলাদেশ">
-বাংলাদেশ
-</option>
-
-<option value="কানাডা">
-কানাডা
-</option>
-
-<option value="মালয়েশিয়া">
-মালয়েশিয়া
-</option>
-
-<option value="মধ্যপ্রাচ্য">
-মধ্যপ্রাচ্য
-</option>
-
-<option value="ইউরোপ">
-ইউরোপ
-</option>
-
-<option value="আমেরিকা">
-আমেরিকা
-</option>
-
-<option value="এশিয়া">
-এশিয়া
-</option>
+<option value="all">সব এলাকা</option>
+<option value="বাংলাদেশ">বাংলাদেশ</option>
+<option value="কানাডা">কানাডা</option>
+<option value="মালয়েশিয়া">মালয়েশিয়া</option>
+<option value="মধ্যপ্রাচ্য">মধ্যপ্রাচ্য</option>
+<option value="ইউরোপ">ইউরোপ</option>
+<option value="আমেরিকা">আমেরিকা</option>
+<option value="এশিয়া">এশিয়া</option>
 
 </select>
 
+</div>
+
+<div class="search-buttons">
 
 <button
-class="search-btn"
-type="button"
-onclick="filterBiodata()"
->
+onclick="searchBiodata()"
+class="search-btn">
 
 <i class="fa-solid fa-search"></i>
-
-খুঁজুন
+সার্চ করুন
 
 </button>
-
-
-</div>
-
 
 <button
-class="clear-btn"
-type="button"
 onclick="clearSearch()"
->
+class="clear-btn">
 
-<i class="fa-solid fa-xmark"></i>
-
-সব বায়োডাটা দেখুন
+<i class="fa-solid fa-rotate-left"></i>
+সব দেখুন
 
 </button>
 
+</div>
 
-<div
-class="result-count"
-id="resultCount"
->
-
-মোট বায়োডাটা: 0
+<div id="resultCount" class="result-count"></div>
 
 </div>
 
 
+<div class="quick-title">
+🌍 দেশ / এলাকা দিয়ে দ্রুত খুঁজুন
 </div>
 
+<div class="country-buttons">
+
+<button class="country-btn" onclick="quickSearch('সৌদি')">
+🇸🇦 সৌদি
+</button>
+
+<button class="country-btn" onclick="quickSearch('কানাডা')">
+🇨🇦 কানাডা
+</button>
+
+<button class="country-btn" onclick="quickSearch('মালয়েশিয়া')">
+🇲🇾 মালয়েশিয়া
+</button>
+
+<button class="country-btn" onclick="quickSearch('ইতালি')">
+🇮🇹 ইতালি
+</button>
+
+<button class="country-btn" onclick="quickSearch('আমেরিকা')">
+🇺🇸 আমেরিকা
+</button>
+
+<button class="country-btn" onclick="quickSearch('ইংল্যান্ড')">
+🇬🇧 ইংল্যান্ড
+</button>
+
+<button class="country-btn" onclick="quickSearch('দুবাই')">
+🇦🇪 দুবাই
+</button>
+
+<button class="country-btn" onclick="quickSearch('কাতার')">
+🇶🇦 কাতার
+</button>
+
+</div>
+
+<div id="biodataGrid" class="biodata-grid"></div>
+
+<div id="noResult" class="no-result">
+<i class="fa-solid fa-circle-exclamation"
+style="font-size:35px;color:#f5c542;"></i>
+
+<br>
+
+এই অনুসন্ধানের সঙ্গে মিলছে এমন কোনো বায়োডাটা বর্তমানে পাওয়া যায়নি।
+
+</div>
 
 </section>
 
-   
+
+<!-- WEBSITE -->
+
+<section class="section">
+
+<div class="section-title">
+<i class="fa-solid fa-globe"></i>
+ওয়েবসাইট
+</div>
+
+<div class="website-box">
+
+<div style="font-size:25px;color:#f5c542;">
+🌐
+</div>
+
+<div style="font-size:20px;font-weight:700;color:#ffe28a;">
+পাত্র-পাত্রী প্ল্যাটফর্ম
+</div>
+
+<div class="website-url">
+https://hamedul691982.github.io/
+</div>
+
+<div class="quick-actions">
+
+<a
+href="https://hamedul691982.github.io/"
+target="_blank"
+class="quick-btn website">
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
+ওয়েবসাইট খুলুন
+</a>
+
+<button
+onclick="copyWebsite()"
+class="quick-btn copy">
+<i class="fa-solid fa-copy"></i>
+লিংক কপি করুন
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FACEBOOK -->
+
+<section class="section">
+
+<div class="section-title">
+<i class="fa-brands fa-facebook"></i>
+Facebook
+</div>
+
+<div class="social-grid">
+
+<a
+href="https://www.facebook.com/PatroPatriPlatformOFFICIAL"
+target="_blank"
+class="social-btn page">
+
+<i class="fa-brands fa-facebook"></i>
+Facebook Page
+
+</a>
+
+<a
+href="https://www.facebook.com/patropatri.platform"
+target="_blank"
+class="social-btn profile">
+
+<i class="fa-solid fa-user"></i>
+Facebook Profile
+
+</a>
+
+<a
+href="https://www.facebook.com/share/g/1EjnGVzL69/"
+target="_blank"
+class="social-btn group">
+
+<i class="fa-solid fa-users"></i>
+Facebook Group
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FACEBOOK ALBUMS -->
+
+<section class="section">
+
+<div class="section-title">
+<i class="fa-solid fa-images"></i>
+Facebook বায়োডাটা অ্যালবাম / পোস্ট
+</div>
+
+<div class="album-grid">
+
+<a
+href="https://www.facebook.com/share/p/1DakgfxWFj/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০১
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/19N8SWZYAG/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০২
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/189K2mTeFb/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০৩
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/1M8KRoYvtQ/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০৪
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/1Em29EF52j/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০৫
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/1KDjrYVWyT/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০৬
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/1LtYkVxhGt/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০৭
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/1ERrKTDF3Z/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০৮
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/14mWScbRVPV/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ০৯
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/14oRSNo5Mjx/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ১০
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/197fdZVWnF/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ১১
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/1F6RnRYrJ8/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ১২
+
+</a>
+
+<a
+href="https://www.facebook.com/share/p/1HVxHHhMno/"
+target="_blank"
+class="album-link">
+
+<i class="fa-solid fa-image"></i>
+বায়োডাটা পোস্ট ১৩
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section">
+
+<div class="section-title">
+<i class="fa-solid fa-headset"></i>
+সরাসরি যোগাযোগ
+</div>
+
+<div class="contact-grid">
+
+<a
+href="https://wa.me/8801829890591"
+target="_blank"
+class="contact-btn whatsapp">
+
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+
+</a>
+
+<button
+onclick="openIMO()"
+class="contact-btn imo">
+
+<i class="fa-solid fa-comments"></i>
+IMO
+
+</button>
+
+<a
+href="https://m.me/PatroPatriPlatformOFFICIAL"
+target="_blank"
+class="contact-btn messenger">
+
+<i class="fa-brands fa-facebook-messenger"></i>
+Messenger
+
+</a>
+
+<a
+href="tel:01829890591"
+class="contact-btn call">
+
+<i class="fa-solid fa-phone"></i>
+Direct Call
+
+</a>
+
+<a
+href="sms:01829890591"
+class="contact-btn sms">
+
+<i class="fa-solid fa-comment-sms"></i>
+SMS
+
+</a>
+
+<a
+href="tel:01829890591"
+class="contact-btn balance">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+Balance Call
+
+</a>
+
+</div>
+
+<div style="margin-top:12px;text-align:center;">
+
+<button
+onclick="copyNumber()"
+class="quick-btn copy"
+style="width:100%;">
+
+<i class="fa-solid fa-copy"></i>
+Admin WhatsApp + IMO: 01829890591 — নম্বর কপি করুন
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- SUBMIT -->
+
+<section class="section">
+
+<div class="section-title">
+<i class="fa-solid fa-file-circle-plus"></i>
+বায়োডাটা জমা দিন
+</div>
+
+<div class="submit-box">
+
+<div class="submit-note">
+
+📋 আপনার বায়োডাটা ফ্রিতে জমা দিতে নিচের তথ্যগুলো লিখে পাঠাতে পারেন।
+<br>
+🔐 ব্যক্তিগত ও সংবেদনশীল তথ্য প্রকাশের ক্ষেত্রে সতর্ক থাকুন।
+<br>
+📌 পাবলিক পোস্টে প্রয়োজন অনুযায়ী পরিচয় সীমিত রাখা হবে।
+
+</div>
+
+<form
+class="submit-form"
+onsubmit="submitBiodata(event)">
+
+<input
+type="text"
+id="submitName"
+class="form-input"
+placeholder="নাম / পরিচয়"
+required>
+
+<select
+id="submi
