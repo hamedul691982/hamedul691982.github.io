@@ -55,7 +55,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 --facebook:#1877F2;
 --imo:#00a8e8;
 --purple:#8b5cf6;
---orange:#ff9800;
 --red:#ef4444;
 --border:rgba(245,197,66,.25);
 }
@@ -199,6 +198,7 @@ border:1px solid var(--border);
 background:var(--card);
 color:white;
 transition:.2s;
+cursor:pointer;
 }
 
 .quick-btn:hover{
@@ -580,10 +580,6 @@ background:#16a34a;
 background:var(--purple);
 }
 
-.balance{
-background:var(--orange);
-}
-
 /* SUBMIT */
 
 .submit-box{
@@ -816,15 +812,19 @@ Admin: MD HAMEDUL
 href="https://hamedul691982.github.io/"
 target="_blank"
 class="quick-btn website">
+
 <i class="fa-solid fa-globe"></i>
 ওয়েবসাইট খুলুন
+
 </a>
 
 <button
 onclick="copyWebsite()"
 class="quick-btn copy">
+
 <i class="fa-solid fa-copy"></i>
 ওয়েবসাইটের লিংক কপি করুন
+
 </button>
 
 </div>
@@ -948,7 +948,6 @@ class="clear-btn">
 
 </div>
 
-
 <div class="quick-title">
 🌍 দেশ / এলাকা দিয়ে দ্রুত খুঁজুন
 </div>
@@ -992,6 +991,7 @@ class="clear-btn">
 <div id="biodataGrid" class="biodata-grid"></div>
 
 <div id="noResult" class="no-result">
+
 <i class="fa-solid fa-circle-exclamation"
 style="font-size:35px;color:#f5c542;"></i>
 
@@ -1004,7 +1004,86 @@ style="font-size:35px;color:#f5c542;"></i>
 </section>
 
 
-<!-- WEBSITE -->
+<!-- CONTACT
+     প্রথম WEBSITE অংশের পরিবর্তে এখানে CONTACT বসানো হয়েছে -->
+
+<section class="section">
+
+<div class="section-title">
+<i class="fa-solid fa-headset"></i>
+সরাসরি যোগাযোগ
+</div>
+
+<div class="contact-grid">
+
+<a
+href="https://wa.me/8801829890591"
+target="_blank"
+class="contact-btn whatsapp">
+
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+
+</a>
+
+<button
+onclick="openIMO()"
+class="contact-btn imo">
+
+<i class="fa-solid fa-comments"></i>
+IMO
+
+</button>
+
+<a
+href="https://m.me/PatroPatriPlatformOFFICIAL"
+target="_blank"
+class="contact-btn messenger">
+
+<i class="fa-brands fa-facebook-messenger"></i>
+Messenger
+
+</a>
+
+<a
+href="tel:01829890591"
+class="contact-btn call">
+
+<i class="fa-solid fa-phone"></i>
+Direct Call
+
+</a>
+
+<a
+href="sms:01829890591"
+class="contact-btn sms">
+
+<i class="fa-solid fa-comment-sms"></i>
+SMS
+
+</a>
+
+</div>
+
+<div style="margin-top:12px;text-align:center;">
+
+<button
+onclick="copyNumber()"
+class="quick-btn copy"
+style="width:100%;">
+
+<i class="fa-solid fa-copy"></i>
+Admin WhatsApp + IMO: 01829890591 — নম্বর কপি করুন
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- WEBSITE
+     এই দ্বিতীয় WEBSITE অংশটি রাখা হয়েছে -->
 
 <section class="section">
 
@@ -1033,15 +1112,19 @@ https://hamedul691982.github.io/
 href="https://hamedul691982.github.io/"
 target="_blank"
 class="quick-btn website">
+
 <i class="fa-solid fa-arrow-up-right-from-square"></i>
 ওয়েবসাইট খুলুন
+
 </a>
 
 <button
 onclick="copyWebsite()"
 class="quick-btn copy">
+
 <i class="fa-solid fa-copy"></i>
 লিংক কপি করুন
+
 </button>
 
 </div>
@@ -1243,92 +1326,6 @@ class="album-link">
 </section>
 
 
-<!-- CONTACT -->
-
-<section class="section">
-
-<div class="section-title">
-<i class="fa-solid fa-headset"></i>
-সরাসরি যোগাযোগ
-</div>
-
-<div class="contact-grid">
-
-<a
-href="https://wa.me/8801829890591"
-target="_blank"
-class="contact-btn whatsapp">
-
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp
-
-</a>
-
-<button
-onclick="openIMO()"
-class="contact-btn imo">
-
-<i class="fa-solid fa-comments"></i>
-IMO
-
-</button>
-
-<a
-href="https://m.me/PatroPatriPlatformOFFICIAL"
-target="_blank"
-class="contact-btn messenger">
-
-<i class="fa-brands fa-facebook-messenger"></i>
-Messenger
-
-</a>
-
-<a
-href="tel:01829890591"
-class="contact-btn call">
-
-<i class="fa-solid fa-phone"></i>
-Direct Call
-
-</a>
-
-<a
-href="sms:01829890591"
-class="contact-btn sms">
-
-<i class="fa-solid fa-comment-sms"></i>
-SMS
-
-</a>
-
-<a
-href="tel:01829890591"
-class="contact-btn balance">
-
-<i class="fa-solid fa-mobile-screen-button"></i>
-Balance Call
-
-</a>
-
-</div>
-
-<div style="margin-top:12px;text-align:center;">
-
-<button
-onclick="copyNumber()"
-class="quick-btn copy"
-style="width:100%;">
-
-<i class="fa-solid fa-copy"></i>
-Admin WhatsApp + IMO: 01829890591 — নম্বর কপি করুন
-
-</button>
-
-</div>
-
-</section>
-
-
 <!-- SUBMIT -->
 
 <section class="section">
@@ -1362,4 +1359,8 @@ placeholder="নাম / পরিচয়"
 required>
 
 <select
-id="submi
+id="submitGender"
+class="form-select"
+required>
+
+<option value=
