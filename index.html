@@ -54,6 +54,13 @@ a{
 text-decoration:none;
 }
 
+button,
+input,
+select,
+textarea{
+font-family:inherit;
+}
+
 .container{
 width:min(1100px,94%);
 margin:auto;
@@ -384,6 +391,21 @@ background:#16a34a;
 .copy{
 background:#b78a24 !important;
 color:white !important;
+}
+
+.copy-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+max-width:650px;
+margin:10px auto 0;
+}
+
+.copy-large{
+width:100%;
+min-height:60px;
+padding:14px 8px;
+font-size:15px;
 }
 
 .quick-actions{
@@ -736,6 +758,15 @@ font-size:21px;
 grid-template-columns:1fr 1fr;
 }
 
+.copy-box{
+grid-template-columns:1fr 1fr;
+}
+
+.copy-large{
+min-height:62px;
+font-size:14px;
+}
+
 .quick-actions{
 grid-template-columns:1fr;
 }
@@ -782,6 +813,16 @@ font-size:15px;
 
 .coverage{
 font-size:12px;
+}
+
+.copy-box{
+gap:7px;
+}
+
+.copy-large{
+min-height:64px;
+font-size:13px;
+padding:12px 5px;
 }
 
 .poster-top{
@@ -863,6 +904,14 @@ flex-wrap:wrap;
 
 .poster-top .poster-social-btn{
 min-width:30%;
+}
+
+.copy-box{
+grid-template-columns:1fr 1fr;
+}
+
+.copy-large{
+font-size:12px;
 }
 
 }
@@ -1141,14 +1190,12 @@ hamedul691982.github.io
 
 <header class="hero">
 
-
 <div class="hero-title">
 সরাসরি যোগাযোগ
 </div>
 
 
 <div class="contact-grid">
-
 
 <a
 href="https://wa.me/8801829890591"
@@ -1191,21 +1238,33 @@ Direct Call
 
 </a>
 
-
 </div>
 
 
-<div style="margin-top:10px;">
+<!-- =====================================================
+     NUMBER + WEBSITE COPY BUTTON
+===================================================== -->
+
+<div class="copy-box">
 
 <button
 onclick="copyNumber()"
-class="quick-btn copy"
-style="width:100%;max-width:650px;margin:auto;">
+class="quick-btn copy copy-large">
 
 <i class="fa-solid fa-copy"></i>
 
-Admin WhatsApp + IMO:
-01829890591 — নম্বর কপি করুন
+নম্বর কপি করুন
+
+</button>
+
+
+<button
+onclick="copyWebsite()"
+class="quick-btn copy copy-large">
+
+<i class="fa-solid fa-globe"></i>
+
+ওয়েবসাইট লিংক কপি করুন
 
 </button>
 
@@ -1237,7 +1296,6 @@ Admin: MD HAMEDUL
 
 <div class="quick-actions">
 
-
 <a
 href="https://hamedul691982.github.io/"
 target="_blank"
@@ -1259,7 +1317,6 @@ Facebook Page
 
 </a>
 
-
 </div>
 
 </header>
@@ -1276,60 +1333,4 @@ Facebook Page
 
 <section class="section">
 
-<div class="section-title">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-গোপনীয়তা ও নিরাপত্তা
-
-</div>
-
-
-<div class="info-grid">
-
-
-<div class="info-box">
-
-<strong>
-🔐 100% পরিচয় গোপন
-</strong>
-
-পাবলিক বায়োডাটায় প্রয়োজনীয় তথ্য ছাড়া ব্যক্তিগত পরিচয় প্রকাশ করা হয় না।
-
-</div>
-
-
-<div class="info-box">
-
-<strong>
-🛡️ দায়িত্বশীল যোগাযোগ
-</strong>
-
-বিয়ে বা যেকোনো সিদ্ধান্তের আগে তথ্য যাচাই করে নেওয়ার অনুরোধ করা হয়।
-
-</div>
-
-
-<div class="info-box">
-
-<strong>
-📋 তথ্য যাচাই
-</strong>
-
-প্রয়োজনীয় ক্ষেত্রে সংশ্লিষ্ট ব্যক্তির কাছ থেকে তথ্য নিশ্চিত করে সিদ্ধান্ত নিন।
-
-</div>
-
-
-<div class="info-box">
-
-<strong>
-🆓 সম্পূর্ণ ফ্রি
-</strong>
-
-বায়োডাটা জমা দেওয়ার জন্য কোনো রেজিস্ট্রেশন বা সার্ভিস চার্জ নেই।
-
-</div>
-
-
-</div>
+<div class="sect
