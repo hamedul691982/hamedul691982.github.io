@@ -1,0 +1,16 @@
+name: Sync Facebook Posts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check setup
+        run: echo "Facebook sync workflow is ready for setup"
